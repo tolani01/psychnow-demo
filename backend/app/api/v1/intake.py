@@ -125,11 +125,11 @@ async def start_intake_session(
         
         # Always return in-memory session (database optional for now)
         return IntakeSessionResponse(
-            id=1,
+            id=conv_session["session_token"],  # Use session_token as ID for in-memory sessions
             session_token=conv_session["session_token"],
-            patient_id=session_data.patient_id,
             current_phase=conv_session["current_phase"],
-            status="active"
+            status="active",
+            created_at=datetime.fromisoformat(conv_session["created_at"])
         )
     except Exception as e:
         logger.error(f"Session creation failed: {e}")
