@@ -17,10 +17,6 @@ services:
         fromDatabase:
           name: psychnow-db
           property: connectionString
-      - key: POSTGRES_URL
-        fromDatabase:
-          name: psychnow-db
-          property: connectionString
       - key: OPENAI_API_KEY
         sync: false
       - key: SECRET_KEY
