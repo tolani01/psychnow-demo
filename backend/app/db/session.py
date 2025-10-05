@@ -25,13 +25,14 @@ try:
         )
     else:
         # PostgreSQL configuration with connection pooling
+        # Note: SSL connection handled by DATABASE_URL parameters
         engine = create_engine(
             settings.DATABASE_URL,
             echo=settings.DEBUG,
             pool_pre_ping=True,
             pool_recycle=3600,
-            pool_size=20,
-            max_overflow=30,
+            pool_size=5,  # Reduced for Render free tier
+            max_overflow=10,
         )
     
     # Create session factory
