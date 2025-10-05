@@ -27,38 +27,37 @@ from app.core.rate_limit import (
 )
 from typing import Optional
 
-# Import these only when needed to avoid loading database dependencies
-def _get_db_dependencies():
-    """Lazy load database dependencies"""
-    try:
-        from app.db.session import get_db
-        from app.models.intake_session import IntakeSession
-        from app.models.intake_report import IntakeReport
-        from app.services.report_service import report_service
-        from app.services.escalation_service import escalation_service
-        from app.services.pdf_service import pdf_service
-        from app.services.session_cleanup_service import session_cleanup_service
-        from app.services.email_service import email_service
-        from app.core.deps import get_current_user_optional
-        from app.models.user import User
-        return {
-            'get_db': get_db,
-            'IntakeSession': IntakeSession,
-            'IntakeReport': IntakeReport,
-            'report_service': report_service,
-            'escalation_service': escalation_service,
-            'pdf_service': pdf_service,
-            'session_cleanup_service': session_cleanup_service,
-            'email_service': email_service,
-            'get_current_user_optional': get_current_user_optional,
-            'User': User
-        }
-    except Exception as e:
-        logger.error(f"Failed to load database dependencies: {e}")
-        return None
-
 router = APIRouter()
 logger = logging.getLogger(__name__)
+
+# Conditional imports - these may fail if database is not available
+try:
+    from app.db.session import get_db
+    from app.models.intake_session import IntakeSession
+    from app.models.intake_report import IntakeReport
+    from app.services.report_service import report_service
+    from app.services.escalation_service import escalation_service
+    from app.services.pdf_service import pdf_service
+    from app.services.session_cleanup_service import session_cleanup_service
+    from app.services.email_service import email_service
+    from app.core.deps import get_current_user_optional
+    from app.models.user import User
+    DB_AVAILABLE = True
+except Exception as e:
+    logger.warning(f"Database dependencies not available: {e}")
+    DB_AVAILABLE = False
+    # Create dummy dependencies to prevent NameError
+    def get_db():
+        raise HTTPException(status_code=503, detail="Database not available")
+    IntakeSession = None
+    IntakeReport = None
+    report_service = None
+    escalation_service = None
+    pdf_service = None
+    session_cleanup_service = None
+    email_service = None
+    get_current_user_optional = None
+    User = None
 
 
 @router.get("/session/{session_token}/recover")
