@@ -54,11 +54,18 @@ def get_db() -> Generator[Session, None, None]:
     """
     if SessionLocal is None:
         # Return a mock session that doesn't do anything
+        class MockQuery:
+            def filter(self, *args): return self
+            def first(self): return None
+            def all(self): return []
+            def count(self): return 0
+        
         class MockSession:
             def add(self, obj): pass
             def commit(self): pass
             def refresh(self, obj): pass
             def close(self): pass
+            def query(self, model): return MockQuery()
             def __enter__(self): return self
             def __exit__(self, *args): pass
         yield MockSession()
