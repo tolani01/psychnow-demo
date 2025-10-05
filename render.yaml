@@ -30,7 +30,7 @@ services:
       - key: OPENAI_MAX_TOKENS
         value: 2000
       - key: ALLOWED_ORIGINS
-        sync: false
+        value: "https://psychnow-demo-96530.web.app,https://psychnow-demo-96530.firebaseapp.com,http://localhost:3000,http://localhost:5173"
       - key: PROVIDER_INVITE_CODE
         value: PSYCHNOW-PROVIDER-2024
       - key: SMTP_HOST

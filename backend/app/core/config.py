@@ -30,7 +30,7 @@ class Settings(BaseSettings):
     OPENAI_MAX_TOKENS: int = 2000
     
     # CORS
-    ALLOWED_ORIGINS: Union[List[str], str] = "http://localhost:5173,http://localhost:3000,http://localhost:3001,http://localhost:3002,http://127.0.0.1:3000,http://127.0.0.1:3001,http://127.0.0.1:3002,http://127.0.0.1:5173,https://psychnow-demo.web.app,https://psychnow-demo.firebaseapp.com"
+    ALLOWED_ORIGINS: Union[List[str], str] = "http://localhost:5173,http://localhost:3000,http://localhost:3001,http://localhost:3002,http://127.0.0.1:3000,http://127.0.0.1:3001,http://127.0.0.1:3002,http://127.0.0.1:5173,https://psychnow-demo.web.app,https://psychnow-demo.firebaseapp.com,https://psychnow-demo-96530.web.app,https://psychnow-demo-96530.firebaseapp.com"
     
     @field_validator('ALLOWED_ORIGINS', mode='before')
     @classmethod
