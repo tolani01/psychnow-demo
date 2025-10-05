@@ -1,0 +1,6813 @@
+[
+  {
+    "id": "SCENARIO_001",
+    "name": "MDD_Single_Episode",
+    "description": "Major Depressive Disorder - Single Episode",
+    "patient_profile": {
+      "demographics": {
+        "age": 68,
+        "gender": "Male",
+        "ethnicity": "Hispanic",
+        "education": "Master's",
+        "employment": "Student"
+      },
+      "presenting_concerns": [
+        "Loss of interest",
+        "Fatigue",
+        "Depressed mood",
+        "Sleep problems"
+      ],
+      "medical_history": [
+        "Diabetes",
+        "Thyroid disorder",
+        "Hypertension"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Chronic stress",
+        "Previous episodes",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes main concern",
+      "Provides basic history",
+      "Answers screening questions",
+      "Receives assessment summary"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "MDD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [
+        "PHQ-9",
+        "C-SSRS"
+      ],
+      "treatment_recommendations": [
+        "Antidepressant medication",
+        "Psychotherapy",
+        "Lifestyle changes"
+      ],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "simple",
+    "dsm5_conditions": [
+      "MDD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Basic symptom recognition",
+      "Standard screening"
+    ]
+  },
+  {
+    "id": "SCENARIO_002",
+    "name": "MDD_Recurrent",
+    "description": "Major Depressive Disorder - Recurrent",
+    "patient_profile": {
+      "demographics": {
+        "age": 40,
+        "gender": "Female",
+        "ethnicity": "Caucasian",
+        "education": "High School",
+        "employment": "Disabled"
+      },
+      "presenting_concerns": [
+        "Loss of interest",
+        "Fatigue",
+        "Depressed mood",
+        "Sleep problems"
+      ],
+      "medical_history": [
+        "Diabetes",
+        "Thyroid disorder",
+        "Hypertension"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Chronic stress",
+        "Previous episodes",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "MDD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [
+        "PHQ-9",
+        "C-SSRS"
+      ],
+      "treatment_recommendations": [
+        "Antidepressant medication",
+        "Psychotherapy",
+        "Lifestyle changes"
+      ],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "MDD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_003",
+    "name": "Bipolar_I_Manic",
+    "description": "Bipolar I Disorder - Manic Episode",
+    "patient_profile": {
+      "demographics": {
+        "age": 64,
+        "gender": "Female",
+        "ethnicity": "Asian",
+        "education": "Some College",
+        "employment": "Student"
+      },
+      "presenting_concerns": [
+        "Decreased sleep",
+        "Elevated energy",
+        "Racing thoughts",
+        "Mood swings"
+      ],
+      "medical_history": [
+        "Migraines",
+        "Sleep disorders"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Stressful life events",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Bipolar I",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [
+        "YMRS",
+        "MDQ"
+      ],
+      "treatment_recommendations": [
+        "Regular monitoring",
+        "Psychoeducation",
+        "Mood stabilizer"
+      ],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "Bipolar I"
+    ],
+    "safety_risks": [
+      "mania"
+    ],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns",
+      "Mood stabilization"
+    ]
+  },
+  {
+    "id": "SCENARIO_004",
+    "name": "Bipolar_II_Hypomanic",
+    "description": "Bipolar II Disorder - Hypomanic Episode",
+    "patient_profile": {
+      "demographics": {
+        "age": 39,
+        "gender": "Male",
+        "ethnicity": "Caucasian",
+        "education": "Master's",
+        "employment": "Unemployed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Bipolar II",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "Bipolar II"
+    ],
+    "safety_risks": [
+      "hypomania"
+    ],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_005",
+    "name": "Persistent_Depressive",
+    "description": "Persistent Depressive Disorder",
+    "patient_profile": {
+      "demographics": {
+        "age": 53,
+        "gender": "Female",
+        "ethnicity": "Caucasian",
+        "education": "Bachelor's",
+        "employment": "Student"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "PDD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "PDD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_006",
+    "name": "GAD_Chronic",
+    "description": "Generalized Anxiety Disorder - Chronic",
+    "patient_profile": {
+      "demographics": {
+        "age": 34,
+        "gender": "Female",
+        "ethnicity": "Native American",
+        "education": "High School",
+        "employment": "Employed"
+      },
+      "presenting_concerns": [
+        "Muscle tension",
+        "Restlessness",
+        "Excessive worry",
+        "Difficulty concentrating"
+      ],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "GAD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [
+        "GAD-7"
+      ],
+      "treatment_recommendations": [
+        "Anxiolytic medication",
+        "Cognitive-behavioral therapy"
+      ],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "GAD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_007",
+    "name": "Panic_Disorder",
+    "description": "Panic Disorder with Agoraphobia",
+    "patient_profile": {
+      "demographics": {
+        "age": 37,
+        "gender": "Non-binary",
+        "ethnicity": "Asian",
+        "education": "Some College",
+        "employment": "Student"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Panic Disorder",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "Panic Disorder"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_008",
+    "name": "Social_Anxiety",
+    "description": "Social Anxiety Disorder",
+    "patient_profile": {
+      "demographics": {
+        "age": 61,
+        "gender": "Male",
+        "ethnicity": "African American",
+        "education": "Master's",
+        "employment": "Disabled"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Social Anxiety",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "Social Anxiety"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_009",
+    "name": "Specific_Phobia",
+    "description": "Specific Phobia - Heights",
+    "patient_profile": {
+      "demographics": {
+        "age": 47,
+        "gender": "Non-binary",
+        "ethnicity": "Asian",
+        "education": "Doctorate",
+        "employment": "Student"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes main concern",
+      "Provides basic history",
+      "Answers screening questions",
+      "Receives assessment summary"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Specific Phobia",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "simple",
+    "dsm5_conditions": [
+      "Specific Phobia"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Basic symptom recognition",
+      "Standard screening"
+    ]
+  },
+  {
+    "id": "SCENARIO_010",
+    "name": "Agoraphobia",
+    "description": "Agoraphobia without Panic",
+    "patient_profile": {
+      "demographics": {
+        "age": 43,
+        "gender": "Female",
+        "ethnicity": "African American",
+        "education": "Bachelor's",
+        "employment": "Unemployed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Agoraphobia",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "Agoraphobia"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_011",
+    "name": "PTSD_Combat",
+    "description": "PTSD - Combat Veteran",
+    "patient_profile": {
+      "demographics": {
+        "age": 55,
+        "gender": "Non-binary",
+        "ethnicity": "African American",
+        "education": "Bachelor's",
+        "employment": "Unemployed"
+      },
+      "presenting_concerns": [
+        "Flashbacks",
+        "Hypervigilance",
+        "Nightmares",
+        "Avoidance"
+      ],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Trauma exposure",
+        "Substance use",
+        "Lack of support"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Suicide risk assessment",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "PTSD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [
+        "PCL-5"
+      ],
+      "treatment_recommendations": [
+        "EMDR",
+        "Trauma-focused therapy",
+        "SSRI"
+      ],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "PTSD"
+    ],
+    "safety_risks": [
+      "suicide_risk"
+    ],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns",
+      "Trauma-informed care"
+    ]
+  },
+  {
+    "id": "SCENARIO_012",
+    "name": "PTSD_Sexual_Assault",
+    "description": "PTSD - Sexual Assault Survivor",
+    "patient_profile": {
+      "demographics": {
+        "age": 24,
+        "gender": "Female",
+        "ethnicity": "Native American",
+        "education": "High School",
+        "employment": "Student"
+      },
+      "presenting_concerns": [
+        "Flashbacks",
+        "Hypervigilance",
+        "Nightmares",
+        "Avoidance"
+      ],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Trauma exposure",
+        "Substance use",
+        "Lack of support"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "PTSD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [
+        "PCL-5"
+      ],
+      "treatment_recommendations": [
+        "EMDR",
+        "Trauma-focused therapy",
+        "SSRI"
+      ],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "PTSD"
+    ],
+    "safety_risks": [
+      "trauma"
+    ],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns",
+      "Trauma-informed care"
+    ]
+  },
+  {
+    "id": "SCENARIO_013",
+    "name": "Acute_Stress",
+    "description": "Acute Stress Disorder",
+    "patient_profile": {
+      "demographics": {
+        "age": 47,
+        "gender": "Non-binary",
+        "ethnicity": "Caucasian",
+        "education": "High School",
+        "employment": "Employed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "ASD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "ASD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_014",
+    "name": "Adjustment_Disorder",
+    "description": "Adjustment Disorder with Anxiety",
+    "patient_profile": {
+      "demographics": {
+        "age": 68,
+        "gender": "Male",
+        "ethnicity": "Caucasian",
+        "education": "Master's",
+        "employment": "Student"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes main concern",
+      "Provides basic history",
+      "Answers screening questions",
+      "Receives assessment summary"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Adjustment Disorder",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "simple",
+    "dsm5_conditions": [
+      "Adjustment Disorder"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Basic symptom recognition",
+      "Standard screening"
+    ]
+  },
+  {
+    "id": "SCENARIO_015",
+    "name": "Schizophrenia_Positive",
+    "description": "Schizophrenia - Positive Symptoms",
+    "patient_profile": {
+      "demographics": {
+        "age": 52,
+        "gender": "Male",
+        "ethnicity": "Caucasian",
+        "education": "Some College",
+        "employment": "Student"
+      },
+      "presenting_concerns": [
+        "Disorganized speech",
+        "Hallucinations",
+        "Negative symptoms",
+        "Delusions"
+      ],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Urban environment",
+        "Substance use",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Violence risk assessment",
+      "Psychosis screening",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Schizophrenia",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [
+        "PANSS"
+      ],
+      "treatment_recommendations": [],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "Schizophrenia"
+    ],
+    "safety_risks": [
+      "psychosis",
+      "violence_risk"
+    ],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention",
+      "Psychosis management"
+    ]
+  },
+  {
+    "id": "SCENARIO_016",
+    "name": "Schizophrenia_Negative",
+    "description": "Schizophrenia - Negative Symptoms",
+    "patient_profile": {
+      "demographics": {
+        "age": 73,
+        "gender": "Non-binary",
+        "ethnicity": "Caucasian",
+        "education": "Bachelor's",
+        "employment": "Unemployed"
+      },
+      "presenting_concerns": [
+        "Disorganized speech",
+        "Hallucinations",
+        "Negative symptoms",
+        "Delusions"
+      ],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Urban environment",
+        "Substance use",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Psychosis screening",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Schizophrenia",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [
+        "PANSS"
+      ],
+      "treatment_recommendations": [],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "Schizophrenia"
+    ],
+    "safety_risks": [
+      "psychosis"
+    ],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns",
+      "Psychosis management"
+    ]
+  },
+  {
+    "id": "SCENARIO_017",
+    "name": "Brief_Psychotic",
+    "description": "Brief Psychotic Disorder",
+    "patient_profile": {
+      "demographics": {
+        "age": 68,
+        "gender": "Female",
+        "ethnicity": "Asian",
+        "education": "Master's",
+        "employment": "Student"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Psychosis screening",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Brief Psychotic",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "Brief Psychotic"
+    ],
+    "safety_risks": [
+      "psychosis"
+    ],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention"
+    ]
+  },
+  {
+    "id": "SCENARIO_018",
+    "name": "Delusional_Disorder",
+    "description": "Delusional Disorder - Persecutory",
+    "patient_profile": {
+      "demographics": {
+        "age": 22,
+        "gender": "Male",
+        "ethnicity": "Asian",
+        "education": "Some College",
+        "employment": "Employed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Psychosis screening",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Delusional Disorder",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "Delusional Disorder"
+    ],
+    "safety_risks": [
+      "psychosis"
+    ],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention"
+    ]
+  },
+  {
+    "id": "SCENARIO_019",
+    "name": "ADHD_Combined",
+    "description": "ADHD - Combined Type",
+    "patient_profile": {
+      "demographics": {
+        "age": 25,
+        "gender": "Male",
+        "ethnicity": "African American",
+        "education": "Bachelor's",
+        "employment": "Disabled"
+      },
+      "presenting_concerns": [
+        "Hyperactivity",
+        "Impulsivity",
+        "Forgetfulness",
+        "Difficulty focusing"
+      ],
+      "medical_history": [
+        "Learning disabilities",
+        "Sleep disorders"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "ADHD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [
+        "ASRS"
+      ],
+      "treatment_recommendations": [
+        "Stimulant medication",
+        "Behavioral therapy",
+        "Academic accommodations"
+      ],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "ADHD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_020",
+    "name": "ADHD_Inattentive",
+    "description": "ADHD - Predominantly Inattentive",
+    "patient_profile": {
+      "demographics": {
+        "age": 62,
+        "gender": "Male",
+        "ethnicity": "Caucasian",
+        "education": "Doctorate",
+        "employment": "Retired"
+      },
+      "presenting_concerns": [
+        "Hyperactivity",
+        "Impulsivity",
+        "Forgetfulness",
+        "Difficulty focusing"
+      ],
+      "medical_history": [
+        "Learning disabilities",
+        "Sleep disorders"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "ADHD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [
+        "ASRS"
+      ],
+      "treatment_recommendations": [
+        "Stimulant medication",
+        "Behavioral therapy",
+        "Academic accommodations"
+      ],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "ADHD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_021",
+    "name": "Autism_Level_1",
+    "description": "Autism Spectrum Disorder - Level 1",
+    "patient_profile": {
+      "demographics": {
+        "age": 74,
+        "gender": "Male",
+        "ethnicity": "Caucasian",
+        "education": "Bachelor's",
+        "employment": "Disabled"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "ASD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "ASD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_022",
+    "name": "Autism_Level_2",
+    "description": "Autism Spectrum Disorder - Level 2",
+    "patient_profile": {
+      "demographics": {
+        "age": 33,
+        "gender": "Female",
+        "ethnicity": "Native American",
+        "education": "Doctorate",
+        "employment": "Retired"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "ASD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "ASD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_023",
+    "name": "Alcohol_Use_Disorder",
+    "description": "Alcohol Use Disorder - Moderate",
+    "patient_profile": {
+      "demographics": {
+        "age": 33,
+        "gender": "Female",
+        "ethnicity": "Native American",
+        "education": "High School",
+        "employment": "Student"
+      },
+      "presenting_concerns": [
+        "Withdrawal symptoms",
+        "Alcohol cravings",
+        "Loss of control",
+        "Tolerance"
+      ],
+      "medical_history": [
+        "Liver disease",
+        "Gastrointestinal issues"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Co-occurring disorders",
+        "Early onset",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "AUD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [
+        "AUDIT-C"
+      ],
+      "treatment_recommendations": [],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "AUD"
+    ],
+    "safety_risks": [
+      "substance_abuse"
+    ],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_024",
+    "name": "Opioid_Use_Disorder",
+    "description": "Opioid Use Disorder - Severe",
+    "patient_profile": {
+      "demographics": {
+        "age": 56,
+        "gender": "Male",
+        "ethnicity": "African American",
+        "education": "Bachelor's",
+        "employment": "Unemployed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "OUD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "OUD"
+    ],
+    "safety_risks": [
+      "substance_abuse",
+      "overdose_risk"
+    ],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention"
+    ]
+  },
+  {
+    "id": "SCENARIO_025",
+    "name": "Cannabis_Use_Disorder",
+    "description": "Cannabis Use Disorder",
+    "patient_profile": {
+      "demographics": {
+        "age": 62,
+        "gender": "Non-binary",
+        "ethnicity": "African American",
+        "education": "Doctorate",
+        "employment": "Unemployed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "CUD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "CUD"
+    ],
+    "safety_risks": [
+      "substance_abuse"
+    ],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_026",
+    "name": "Stimulant_Use_Disorder",
+    "description": "Stimulant Use Disorder",
+    "patient_profile": {
+      "demographics": {
+        "age": 41,
+        "gender": "Non-binary",
+        "ethnicity": "Hispanic",
+        "education": "Bachelor's",
+        "employment": "Employed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Stimulant Use",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "Stimulant Use"
+    ],
+    "safety_risks": [
+      "substance_abuse"
+    ],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_027",
+    "name": "Anorexia_Nervosa",
+    "description": "Anorexia Nervosa - Restricting Type",
+    "patient_profile": {
+      "demographics": {
+        "age": 64,
+        "gender": "Non-binary",
+        "ethnicity": "African American",
+        "education": "Some College",
+        "employment": "Disabled"
+      },
+      "presenting_concerns": [
+        "Weight loss",
+        "Food restriction",
+        "Excessive exercise",
+        "Body image concerns"
+      ],
+      "medical_history": [
+        "Electrolyte imbalances",
+        "Osteoporosis",
+        "Cardiac issues"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Anorexia",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [
+        "SCOFF",
+        "EAT-26"
+      ],
+      "treatment_recommendations": [],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "Anorexia"
+    ],
+    "safety_risks": [
+      "medical_risk"
+    ],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_028",
+    "name": "Bulimia_Nervosa",
+    "description": "Bulimia Nervosa",
+    "patient_profile": {
+      "demographics": {
+        "age": 19,
+        "gender": "Non-binary",
+        "ethnicity": "Asian",
+        "education": "Bachelor's",
+        "employment": "Student"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Bulimia",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "Bulimia"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_029",
+    "name": "Binge_Eating",
+    "description": "Binge Eating Disorder",
+    "patient_profile": {
+      "demographics": {
+        "age": 38,
+        "gender": "Male",
+        "ethnicity": "African American",
+        "education": "Doctorate",
+        "employment": "Disabled"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "BED",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "BED"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_030",
+    "name": "Borderline_PD",
+    "description": "Borderline Personality Disorder",
+    "patient_profile": {
+      "demographics": {
+        "age": 29,
+        "gender": "Non-binary",
+        "ethnicity": "Asian",
+        "education": "Master's",
+        "employment": "Employed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Suicide risk assessment",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "BPD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "BPD"
+    ],
+    "safety_risks": [
+      "suicide_risk",
+      "self_harm"
+    ],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention"
+    ]
+  },
+  {
+    "id": "SCENARIO_031",
+    "name": "Narcissistic_PD",
+    "description": "Narcissistic Personality Disorder",
+    "patient_profile": {
+      "demographics": {
+        "age": 42,
+        "gender": "Male",
+        "ethnicity": "Asian",
+        "education": "Master's",
+        "employment": "Disabled"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "NPD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "NPD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_032",
+    "name": "Antisocial_PD",
+    "description": "Antisocial Personality Disorder",
+    "patient_profile": {
+      "demographics": {
+        "age": 23,
+        "gender": "Non-binary",
+        "ethnicity": "Hispanic",
+        "education": "Bachelor's",
+        "employment": "Student"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Violence risk assessment",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "ASPD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "ASPD"
+    ],
+    "safety_risks": [
+      "violence_risk"
+    ],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention"
+    ]
+  },
+  {
+    "id": "SCENARIO_033",
+    "name": "Avoidant_PD",
+    "description": "Avoidant Personality Disorder",
+    "patient_profile": {
+      "demographics": {
+        "age": 60,
+        "gender": "Non-binary",
+        "ethnicity": "Native American",
+        "education": "Master's",
+        "employment": "Student"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "AvPD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "AvPD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_034",
+    "name": "Insomnia_Disorder",
+    "description": "Insomnia Disorder",
+    "patient_profile": {
+      "demographics": {
+        "age": 65,
+        "gender": "Non-binary",
+        "ethnicity": "Native American",
+        "education": "Some College",
+        "employment": "Disabled"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes main concern",
+      "Provides basic history",
+      "Answers screening questions",
+      "Receives assessment summary"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Insomnia",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "simple",
+    "dsm5_conditions": [
+      "Insomnia"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Basic symptom recognition",
+      "Standard screening"
+    ]
+  },
+  {
+    "id": "SCENARIO_035",
+    "name": "Narcolepsy",
+    "description": "Narcolepsy",
+    "patient_profile": {
+      "demographics": {
+        "age": 36,
+        "gender": "Female",
+        "ethnicity": "African American",
+        "education": "High School",
+        "employment": "Disabled"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Narcolepsy",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "Narcolepsy"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_036",
+    "name": "Sleep_Apnea",
+    "description": "Obstructive Sleep Apnea",
+    "patient_profile": {
+      "demographics": {
+        "age": 42,
+        "gender": "Non-binary",
+        "ethnicity": "Hispanic",
+        "education": "High School",
+        "employment": "Disabled"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes main concern",
+      "Provides basic history",
+      "Answers screening questions",
+      "Receives assessment summary"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "OSA",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "simple",
+    "dsm5_conditions": [
+      "OSA"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Basic symptom recognition",
+      "Standard screening"
+    ]
+  },
+  {
+    "id": "SCENARIO_037",
+    "name": "Mild_Neurocognitive",
+    "description": "Mild Neurocognitive Disorder",
+    "patient_profile": {
+      "demographics": {
+        "age": 34,
+        "gender": "Female",
+        "ethnicity": "Asian",
+        "education": "High School",
+        "employment": "Disabled"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Mild NCD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "Mild NCD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_038",
+    "name": "Major_Neurocognitive",
+    "description": "Major Neurocognitive Disorder",
+    "patient_profile": {
+      "demographics": {
+        "age": 48,
+        "gender": "Non-binary",
+        "ethnicity": "Native American",
+        "education": "Bachelor's",
+        "employment": "Retired"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Major NCD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "Major NCD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_039",
+    "name": "Dissociative_Identity",
+    "description": "Dissociative Identity Disorder",
+    "patient_profile": {
+      "demographics": {
+        "age": 33,
+        "gender": "Non-binary",
+        "ethnicity": "Native American",
+        "education": "High School",
+        "employment": "Student"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "DID",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "DID"
+    ],
+    "safety_risks": [
+      "dissociation"
+    ],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention"
+    ]
+  },
+  {
+    "id": "SCENARIO_040",
+    "name": "Depersonalization",
+    "description": "Depersonalization/Derealization Disorder",
+    "patient_profile": {
+      "demographics": {
+        "age": 38,
+        "gender": "Non-binary",
+        "ethnicity": "Caucasian",
+        "education": "Some College",
+        "employment": "Disabled"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "DPDR",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "DPDR"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_041",
+    "name": "Somatic_Symptom",
+    "description": "Somatic Symptom Disorder",
+    "patient_profile": {
+      "demographics": {
+        "age": 57,
+        "gender": "Female",
+        "ethnicity": "Asian",
+        "education": "High School",
+        "employment": "Retired"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "SSD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "SSD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_042",
+    "name": "Illness_Anxiety",
+    "description": "Illness Anxiety Disorder",
+    "patient_profile": {
+      "demographics": {
+        "age": 73,
+        "gender": "Female",
+        "ethnicity": "Asian",
+        "education": "Doctorate",
+        "employment": "Disabled"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "IAD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "IAD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_043",
+    "name": "Conversion_Disorder",
+    "description": "Conversion Disorder",
+    "patient_profile": {
+      "demographics": {
+        "age": 43,
+        "gender": "Non-binary",
+        "ethnicity": "African American",
+        "education": "Doctorate",
+        "employment": "Employed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Conversion",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "Conversion"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_044",
+    "name": "Erectile_Dysfunction",
+    "description": "Erectile Dysfunction",
+    "patient_profile": {
+      "demographics": {
+        "age": 61,
+        "gender": "Female",
+        "ethnicity": "Native American",
+        "education": "Some College",
+        "employment": "Disabled"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes main concern",
+      "Provides basic history",
+      "Answers screening questions",
+      "Receives assessment summary"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "ED",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "simple",
+    "dsm5_conditions": [
+      "ED"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Basic symptom recognition",
+      "Standard screening"
+    ]
+  },
+  {
+    "id": "SCENARIO_045",
+    "name": "Premature_Ejaculation",
+    "description": "Premature Ejaculation",
+    "patient_profile": {
+      "demographics": {
+        "age": 65,
+        "gender": "Non-binary",
+        "ethnicity": "Asian",
+        "education": "Doctorate",
+        "employment": "Unemployed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes main concern",
+      "Provides basic history",
+      "Answers screening questions",
+      "Receives assessment summary"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "PE",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "simple",
+    "dsm5_conditions": [
+      "PE"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Basic symptom recognition",
+      "Standard screening"
+    ]
+  },
+  {
+    "id": "SCENARIO_046",
+    "name": "MDD_GAD_Comorbid",
+    "description": "MDD + GAD Comorbidity",
+    "patient_profile": {
+      "demographics": {
+        "age": 71,
+        "gender": "Non-binary",
+        "ethnicity": "African American",
+        "education": "Some College",
+        "employment": "Employed"
+      },
+      "presenting_concerns": [
+        "Muscle tension",
+        "Fatigue",
+        "Excessive worry",
+        "Restlessness",
+        "Sleep problems",
+        "Difficulty concentrating",
+        "Loss of interest",
+        "Depressed mood"
+      ],
+      "medical_history": [
+        "Diabetes",
+        "Thyroid disorder",
+        "Hypertension"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Chronic stress",
+        "Previous episodes",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "MDD",
+      "secondary_diagnoses": [
+        "GAD"
+      ],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [
+        "PHQ-9",
+        "GAD-7",
+        "C-SSRS"
+      ],
+      "treatment_recommendations": [
+        "Lifestyle changes",
+        "Anxiolytic medication",
+        "Cognitive-behavioral therapy",
+        "Antidepressant medication",
+        "Psychotherapy"
+      ],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "MDD",
+      "GAD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_047",
+    "name": "Bipolar_PTSD_Comorbid",
+    "description": "Bipolar I + PTSD Comorbidity",
+    "patient_profile": {
+      "demographics": {
+        "age": 21,
+        "gender": "Female",
+        "ethnicity": "African American",
+        "education": "Bachelor's",
+        "employment": "Retired"
+      },
+      "presenting_concerns": [
+        "Decreased sleep",
+        "Elevated energy",
+        "Racing thoughts",
+        "Hypervigilance",
+        "Mood swings",
+        "Nightmares",
+        "Avoidance",
+        "Flashbacks"
+      ],
+      "medical_history": [
+        "Migraines",
+        "Sleep disorders"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Stressful life events",
+        "Trauma exposure",
+        "Substance use",
+        "Lack of support",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Suicide risk assessment",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Bipolar I",
+      "secondary_diagnoses": [
+        "PTSD"
+      ],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [
+        "YMRS",
+        "PCL-5",
+        "MDQ"
+      ],
+      "treatment_recommendations": [
+        "Regular monitoring",
+        "Psychoeducation",
+        "Mood stabilizer",
+        "EMDR",
+        "Trauma-focused therapy",
+        "SSRI"
+      ],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "Bipolar I",
+      "PTSD"
+    ],
+    "safety_risks": [
+      "suicide_risk"
+    ],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention",
+      "Mood stabilization",
+      "Trauma-informed care"
+    ]
+  },
+  {
+    "id": "SCENARIO_048",
+    "name": "ADHD_Anxiety_Comorbid",
+    "description": "ADHD + Anxiety Comorbidity",
+    "patient_profile": {
+      "demographics": {
+        "age": 26,
+        "gender": "Male",
+        "ethnicity": "African American",
+        "education": "High School",
+        "employment": "Unemployed"
+      },
+      "presenting_concerns": [
+        "Muscle tension",
+        "Restlessness",
+        "Excessive worry",
+        "Impulsivity",
+        "Difficulty focusing",
+        "Difficulty concentrating",
+        "Hyperactivity",
+        "Forgetfulness"
+      ],
+      "medical_history": [
+        "Learning disabilities",
+        "Sleep disorders"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "ADHD",
+      "secondary_diagnoses": [
+        "GAD"
+      ],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [
+        "GAD-7",
+        "ASRS"
+      ],
+      "treatment_recommendations": [
+        "Behavioral therapy",
+        "Academic accommodations",
+        "Anxiolytic medication",
+        "Stimulant medication",
+        "Cognitive-behavioral therapy"
+      ],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "ADHD",
+      "GAD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_049",
+    "name": "Substance_MDD_Comorbid",
+    "description": "Substance Use + MDD Comorbidity",
+    "patient_profile": {
+      "demographics": {
+        "age": 22,
+        "gender": "Non-binary",
+        "ethnicity": "Caucasian",
+        "education": "Doctorate",
+        "employment": "Employed"
+      },
+      "presenting_concerns": [
+        "Fatigue",
+        "Withdrawal symptoms",
+        "Alcohol cravings",
+        "Sleep problems",
+        "Loss of interest",
+        "Depressed mood",
+        "Loss of control",
+        "Tolerance"
+      ],
+      "medical_history": [
+        "Liver disease",
+        "Thyroid disorder",
+        "Diabetes",
+        "Gastrointestinal issues",
+        "Hypertension"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Co-occurring disorders",
+        "Early onset",
+        "Previous episodes",
+        "Chronic stress",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Suicide risk assessment",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "AUD",
+      "secondary_diagnoses": [
+        "MDD"
+      ],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [
+        "AUDIT-C",
+        "PHQ-9",
+        "C-SSRS"
+      ],
+      "treatment_recommendations": [
+        "Antidepressant medication",
+        "Psychotherapy",
+        "Lifestyle changes"
+      ],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "AUD",
+      "MDD"
+    ],
+    "safety_risks": [
+      "suicide_risk"
+    ],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention"
+    ]
+  },
+  {
+    "id": "SCENARIO_050",
+    "name": "Cultural_Somatization",
+    "description": "Cultural Somatization - Latino Patient",
+    "patient_profile": {
+      "demographics": {
+        "age": 70,
+        "gender": "Female",
+        "ethnicity": "Caucasian",
+        "education": "Bachelor's",
+        "employment": "Retired"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "SSD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "SSD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_051",
+    "name": "Elderly_Depression",
+    "description": "Late-Life Depression with Medical Comorbidities",
+    "patient_profile": {
+      "demographics": {
+        "age": 37,
+        "gender": "Female",
+        "ethnicity": "Hispanic",
+        "education": "Bachelor's",
+        "employment": "Employed"
+      },
+      "presenting_concerns": [
+        "Loss of interest",
+        "Fatigue",
+        "Depressed mood",
+        "Sleep problems"
+      ],
+      "medical_history": [
+        "Diabetes",
+        "Thyroid disorder",
+        "Hypertension"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Chronic stress",
+        "Previous episodes",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "MDD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [
+        "PHQ-9",
+        "C-SSRS"
+      ],
+      "treatment_recommendations": [
+        "Antidepressant medication",
+        "Psychotherapy",
+        "Lifestyle changes"
+      ],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "MDD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_052",
+    "name": "Adolescent_Identity_Crisis",
+    "description": "Adolescent Identity Crisis",
+    "patient_profile": {
+      "demographics": {
+        "age": 38,
+        "gender": "Non-binary",
+        "ethnicity": "Hispanic",
+        "education": "Bachelor's",
+        "employment": "Retired"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Adjustment Disorder",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "Adjustment Disorder"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_053",
+    "name": "Perinatal_Depression",
+    "description": "Perinatal Depression - Postpartum",
+    "patient_profile": {
+      "demographics": {
+        "age": 61,
+        "gender": "Male",
+        "ethnicity": "Native American",
+        "education": "Some College",
+        "employment": "Employed"
+      },
+      "presenting_concerns": [
+        "Loss of interest",
+        "Fatigue",
+        "Depressed mood",
+        "Sleep problems"
+      ],
+      "medical_history": [
+        "Diabetes",
+        "Thyroid disorder",
+        "Hypertension"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Chronic stress",
+        "Previous episodes",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "MDD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [
+        "PHQ-9",
+        "C-SSRS"
+      ],
+      "treatment_recommendations": [
+        "Antidepressant medication",
+        "Psychotherapy",
+        "Lifestyle changes"
+      ],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "MDD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_054",
+    "name": "LGBTQ_Depression",
+    "description": "LGBTQ+ Depression with Minority Stress",
+    "patient_profile": {
+      "demographics": {
+        "age": 58,
+        "gender": "Non-binary",
+        "ethnicity": "Native American",
+        "education": "Master's",
+        "employment": "Student"
+      },
+      "presenting_concerns": [
+        "Loss of interest",
+        "Fatigue",
+        "Depressed mood",
+        "Sleep problems"
+      ],
+      "medical_history": [
+        "Diabetes",
+        "Thyroid disorder",
+        "Hypertension"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Chronic stress",
+        "Previous episodes",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "MDD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [
+        "PHQ-9",
+        "C-SSRS"
+      ],
+      "treatment_recommendations": [
+        "Antidepressant medication",
+        "Psychotherapy",
+        "Lifestyle changes"
+      ],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "MDD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_055",
+    "name": "Treatment_Resistant_MDD",
+    "description": "Treatment-Resistant Major Depression",
+    "patient_profile": {
+      "demographics": {
+        "age": 31,
+        "gender": "Male",
+        "ethnicity": "Hispanic",
+        "education": "High School",
+        "employment": "Student"
+      },
+      "presenting_concerns": [
+        "Loss of interest",
+        "Fatigue",
+        "Depressed mood",
+        "Sleep problems"
+      ],
+      "medical_history": [
+        "Diabetes",
+        "Thyroid disorder",
+        "Hypertension"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Chronic stress",
+        "Previous episodes",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Suicide risk assessment",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "MDD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [
+        "PHQ-9",
+        "C-SSRS"
+      ],
+      "treatment_recommendations": [
+        "Antidepressant medication",
+        "Psychotherapy",
+        "Lifestyle changes"
+      ],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "MDD"
+    ],
+    "safety_risks": [
+      "suicide_risk"
+    ],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention"
+    ]
+  },
+  {
+    "id": "SCENARIO_056",
+    "name": "Rapid_Cycling_Bipolar",
+    "description": "Rapid Cycling Bipolar Disorder",
+    "patient_profile": {
+      "demographics": {
+        "age": 44,
+        "gender": "Female",
+        "ethnicity": "Caucasian",
+        "education": "Some College",
+        "employment": "Unemployed"
+      },
+      "presenting_concerns": [
+        "Decreased sleep",
+        "Elevated energy",
+        "Racing thoughts",
+        "Mood swings"
+      ],
+      "medical_history": [
+        "Migraines",
+        "Sleep disorders"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Stressful life events",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Bipolar I",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [
+        "YMRS",
+        "MDQ"
+      ],
+      "treatment_recommendations": [
+        "Regular monitoring",
+        "Psychoeducation",
+        "Mood stabilizer"
+      ],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "Bipolar I"
+    ],
+    "safety_risks": [
+      "mania"
+    ],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention",
+      "Mood stabilization"
+    ]
+  },
+  {
+    "id": "SCENARIO_057",
+    "name": "Chronic_PTSD",
+    "description": "Chronic PTSD - 20+ Years",
+    "patient_profile": {
+      "demographics": {
+        "age": 51,
+        "gender": "Female",
+        "ethnicity": "Hispanic",
+        "education": "Some College",
+        "employment": "Retired"
+      },
+      "presenting_concerns": [
+        "Flashbacks",
+        "Hypervigilance",
+        "Nightmares",
+        "Avoidance"
+      ],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Trauma exposure",
+        "Substance use",
+        "Lack of support"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Suicide risk assessment",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "PTSD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [
+        "PCL-5"
+      ],
+      "treatment_recommendations": [
+        "EMDR",
+        "Trauma-focused therapy",
+        "SSRI"
+      ],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "PTSD"
+    ],
+    "safety_risks": [
+      "suicide_risk"
+    ],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention",
+      "Trauma-informed care"
+    ]
+  },
+  {
+    "id": "SCENARIO_058",
+    "name": "Thyroid_Depression",
+    "description": "Hypothyroidism Presenting as Depression",
+    "patient_profile": {
+      "demographics": {
+        "age": 21,
+        "gender": "Male",
+        "ethnicity": "Hispanic",
+        "education": "Bachelor's",
+        "employment": "Employed"
+      },
+      "presenting_concerns": [
+        "Loss of interest",
+        "Fatigue",
+        "Depressed mood",
+        "Sleep problems"
+      ],
+      "medical_history": [
+        "Diabetes",
+        "Thyroid disorder",
+        "Hypertension"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Chronic stress",
+        "Previous episodes",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "MDD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [
+        "PHQ-9",
+        "C-SSRS"
+      ],
+      "treatment_recommendations": [
+        "Antidepressant medication",
+        "Psychotherapy",
+        "Lifestyle changes"
+      ],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "MDD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_059",
+    "name": "Medication_Induced_Mania",
+    "description": "SSRI-Induced Mania",
+    "patient_profile": {
+      "demographics": {
+        "age": 35,
+        "gender": "Female",
+        "ethnicity": "Asian",
+        "education": "Doctorate",
+        "employment": "Unemployed"
+      },
+      "presenting_concerns": [
+        "Decreased sleep",
+        "Elevated energy",
+        "Racing thoughts",
+        "Mood swings"
+      ],
+      "medical_history": [
+        "Migraines",
+        "Sleep disorders"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Stressful life events",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Bipolar I",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [
+        "YMRS",
+        "MDQ"
+      ],
+      "treatment_recommendations": [
+        "Regular monitoring",
+        "Psychoeducation",
+        "Mood stabilizer"
+      ],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "Bipolar I"
+    ],
+    "safety_risks": [
+      "mania"
+    ],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention",
+      "Mood stabilization"
+    ]
+  },
+  {
+    "id": "SCENARIO_060",
+    "name": "Cancer_Related_Depression",
+    "description": "Cancer-Related Depression",
+    "patient_profile": {
+      "demographics": {
+        "age": 64,
+        "gender": "Male",
+        "ethnicity": "African American",
+        "education": "Doctorate",
+        "employment": "Employed"
+      },
+      "presenting_concerns": [
+        "Loss of interest",
+        "Fatigue",
+        "Depressed mood",
+        "Sleep problems"
+      ],
+      "medical_history": [
+        "Diabetes",
+        "Thyroid disorder",
+        "Hypertension"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Chronic stress",
+        "Previous episodes",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "MDD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [
+        "PHQ-9",
+        "C-SSRS"
+      ],
+      "treatment_recommendations": [
+        "Antidepressant medication",
+        "Psychotherapy",
+        "Lifestyle changes"
+      ],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "MDD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_061",
+    "name": "Chronic_Pain_Depression",
+    "description": "Chronic Pain with Depression",
+    "patient_profile": {
+      "demographics": {
+        "age": 23,
+        "gender": "Non-binary",
+        "ethnicity": "Asian",
+        "education": "Bachelor's",
+        "employment": "Employed"
+      },
+      "presenting_concerns": [
+        "Loss of interest",
+        "Fatigue",
+        "Depressed mood",
+        "Sleep problems"
+      ],
+      "medical_history": [
+        "Diabetes",
+        "Thyroid disorder",
+        "Hypertension"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Chronic stress",
+        "Previous episodes",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "MDD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [
+        "PHQ-9",
+        "C-SSRS"
+      ],
+      "treatment_recommendations": [
+        "Antidepressant medication",
+        "Psychotherapy",
+        "Lifestyle changes"
+      ],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "MDD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_062",
+    "name": "Active_Suicidal_Ideation",
+    "description": "Active Suicidal Ideation with Plan",
+    "patient_profile": {
+      "demographics": {
+        "age": 26,
+        "gender": "Female",
+        "ethnicity": "Caucasian",
+        "education": "Bachelor's",
+        "employment": "Employed"
+      },
+      "presenting_concerns": [
+        "Loss of interest",
+        "Fatigue",
+        "Depressed mood",
+        "Sleep problems"
+      ],
+      "medical_history": [
+        "Diabetes",
+        "Thyroid disorder",
+        "Hypertension"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Chronic stress",
+        "Previous episodes",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Suicide risk assessment",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "MDD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [
+        "PHQ-9",
+        "C-SSRS"
+      ],
+      "treatment_recommendations": [
+        "Antidepressant medication",
+        "Psychotherapy",
+        "Lifestyle changes"
+      ],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "MDD"
+    ],
+    "safety_risks": [
+      "suicide_risk"
+    ],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention"
+    ]
+  },
+  {
+    "id": "SCENARIO_063",
+    "name": "Homicidal_Ideation",
+    "description": "Homicidal Ideation with Specific Target",
+    "patient_profile": {
+      "demographics": {
+        "age": 49,
+        "gender": "Non-binary",
+        "ethnicity": "Native American",
+        "education": "Some College",
+        "employment": "Unemployed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "ASPD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "ASPD"
+    ],
+    "safety_risks": [
+      "homicide_risk"
+    ],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention"
+    ]
+  },
+  {
+    "id": "SCENARIO_064",
+    "name": "Psychotic_Decompensation",
+    "description": "Acute Psychotic Decompensation",
+    "patient_profile": {
+      "demographics": {
+        "age": 28,
+        "gender": "Non-binary",
+        "ethnicity": "Asian",
+        "education": "Some College",
+        "employment": "Disabled"
+      },
+      "presenting_concerns": [
+        "Disorganized speech",
+        "Hallucinations",
+        "Negative symptoms",
+        "Delusions"
+      ],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Urban environment",
+        "Substance use",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Psychosis screening",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Schizophrenia",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [
+        "PANSS"
+      ],
+      "treatment_recommendations": [],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "Schizophrenia"
+    ],
+    "safety_risks": [
+      "psychosis"
+    ],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention",
+      "Psychosis management"
+    ]
+  },
+  {
+    "id": "SCENARIO_065",
+    "name": "Mania_with_Psychosis",
+    "description": "Manic Episode with Psychotic Features",
+    "patient_profile": {
+      "demographics": {
+        "age": 20,
+        "gender": "Non-binary",
+        "ethnicity": "Native American",
+        "education": "High School",
+        "employment": "Student"
+      },
+      "presenting_concerns": [
+        "Decreased sleep",
+        "Elevated energy",
+        "Racing thoughts",
+        "Mood swings"
+      ],
+      "medical_history": [
+        "Migraines",
+        "Sleep disorders"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Stressful life events",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Psychosis screening",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Bipolar I",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [
+        "YMRS",
+        "MDQ"
+      ],
+      "treatment_recommendations": [
+        "Regular monitoring",
+        "Psychoeducation",
+        "Mood stabilizer"
+      ],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "Bipolar I"
+    ],
+    "safety_risks": [
+      "mania",
+      "psychosis"
+    ],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention",
+      "Mood stabilization"
+    ]
+  },
+  {
+    "id": "SCENARIO_066",
+    "name": "Malingering_Assessment",
+    "description": "Suspected Malingering for Disability",
+    "patient_profile": {
+      "demographics": {
+        "age": 22,
+        "gender": "Male",
+        "ethnicity": "African American",
+        "education": "Master's",
+        "employment": "Disabled"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Malingering",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "Malingering"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_067",
+    "name": "Factitious_Disorder",
+    "description": "Factitious Disorder Imposed on Self",
+    "patient_profile": {
+      "demographics": {
+        "age": 33,
+        "gender": "Non-binary",
+        "ethnicity": "Asian",
+        "education": "Some College",
+        "employment": "Disabled"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Factitious",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "Factitious"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention"
+    ]
+  },
+  {
+    "id": "SCENARIO_068",
+    "name": "Conversion_Paralysis",
+    "description": "Conversion Disorder - Paralysis",
+    "patient_profile": {
+      "demographics": {
+        "age": 26,
+        "gender": "Non-binary",
+        "ethnicity": "Asian",
+        "education": "Doctorate",
+        "employment": "Unemployed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Conversion",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "Conversion"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_069",
+    "name": "Dissociative_Amnesia",
+    "description": "Dissociative Amnesia",
+    "patient_profile": {
+      "demographics": {
+        "age": 65,
+        "gender": "Non-binary",
+        "ethnicity": "Native American",
+        "education": "High School",
+        "employment": "Retired"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Dissociative Amnesia",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "Dissociative Amnesia"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_070",
+    "name": "Alcohol_Withdrawal",
+    "description": "Alcohol Withdrawal Syndrome",
+    "patient_profile": {
+      "demographics": {
+        "age": 48,
+        "gender": "Non-binary",
+        "ethnicity": "Asian",
+        "education": "Master's",
+        "employment": "Disabled"
+      },
+      "presenting_concerns": [
+        "Withdrawal symptoms",
+        "Alcohol cravings",
+        "Loss of control",
+        "Tolerance"
+      ],
+      "medical_history": [
+        "Liver disease",
+        "Gastrointestinal issues"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Co-occurring disorders",
+        "Early onset",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "AUD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [
+        "AUDIT-C"
+      ],
+      "treatment_recommendations": [],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "AUD"
+    ],
+    "safety_risks": [
+      "withdrawal"
+    ],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention"
+    ]
+  },
+  {
+    "id": "SCENARIO_071",
+    "name": "Opioid_Overdose_Risk",
+    "description": "High-Risk Opioid Use with Overdose History",
+    "patient_profile": {
+      "demographics": {
+        "age": 55,
+        "gender": "Female",
+        "ethnicity": "Hispanic",
+        "education": "Master's",
+        "employment": "Student"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "OUD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "OUD"
+    ],
+    "safety_risks": [
+      "overdose_risk"
+    ],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention"
+    ]
+  },
+  {
+    "id": "SCENARIO_072",
+    "name": "Polysubstance_Abuse",
+    "description": "Polysubstance Use Disorder",
+    "patient_profile": {
+      "demographics": {
+        "age": 38,
+        "gender": "Female",
+        "ethnicity": "Caucasian",
+        "education": "Master's",
+        "employment": "Student"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Polysubstance",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "Polysubstance"
+    ],
+    "safety_risks": [
+      "overdose_risk"
+    ],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention"
+    ]
+  },
+  {
+    "id": "SCENARIO_073",
+    "name": "Capgras_Syndrome",
+    "description": "Capgras Syndrome",
+    "patient_profile": {
+      "demographics": {
+        "age": 58,
+        "gender": "Female",
+        "ethnicity": "Native American",
+        "education": "Bachelor's",
+        "employment": "Employed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Psychosis screening",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Delusional Disorder",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "Delusional Disorder"
+    ],
+    "safety_risks": [
+      "psychosis"
+    ],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention"
+    ]
+  },
+  {
+    "id": "SCENARIO_074",
+    "name": "Cotard_Syndrome",
+    "description": "Cotard Syndrome",
+    "patient_profile": {
+      "demographics": {
+        "age": 66,
+        "gender": "Female",
+        "ethnicity": "Hispanic",
+        "education": "Doctorate",
+        "employment": "Retired"
+      },
+      "presenting_concerns": [
+        "Loss of interest",
+        "Fatigue",
+        "Depressed mood",
+        "Sleep problems"
+      ],
+      "medical_history": [
+        "Diabetes",
+        "Thyroid disorder",
+        "Hypertension"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Chronic stress",
+        "Previous episodes",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Psychosis screening",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "MDD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [
+        "PHQ-9",
+        "C-SSRS"
+      ],
+      "treatment_recommendations": [
+        "Antidepressant medication",
+        "Psychotherapy",
+        "Lifestyle changes"
+      ],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "MDD"
+    ],
+    "safety_risks": [
+      "psychosis"
+    ],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention"
+    ]
+  },
+  {
+    "id": "SCENARIO_075",
+    "name": "Alice_Wonderland",
+    "description": "Alice in Wonderland Syndrome",
+    "patient_profile": {
+      "demographics": {
+        "age": 59,
+        "gender": "Male",
+        "ethnicity": "Caucasian",
+        "education": "Some College",
+        "employment": "Student"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Depersonalization",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "Depersonalization"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_076",
+    "name": "Non_English_Speaker",
+    "description": "Non-English Speaking Patient",
+    "patient_profile": {
+      "demographics": {
+        "age": 60,
+        "gender": "Non-binary",
+        "ethnicity": "Asian",
+        "education": "Master's",
+        "employment": "Employed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Language Barrier",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "Language Barrier"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_077",
+    "name": "Hearing_Impaired",
+    "description": "Hearing Impaired Patient",
+    "patient_profile": {
+      "demographics": {
+        "age": 61,
+        "gender": "Female",
+        "ethnicity": "African American",
+        "education": "High School",
+        "employment": "Employed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Communication Barrier",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "Communication Barrier"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_078",
+    "name": "Intellectually_Disabled",
+    "description": "Intellectually Disabled Patient",
+    "patient_profile": {
+      "demographics": {
+        "age": 67,
+        "gender": "Non-binary",
+        "ethnicity": "Hispanic",
+        "education": "Some College",
+        "employment": "Retired"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Intellectual Disability",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "Intellectual Disability"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_079",
+    "name": "Highly_Defensive",
+    "description": "Highly Defensive and Resistant Patient",
+    "patient_profile": {
+      "demographics": {
+        "age": 59,
+        "gender": "Female",
+        "ethnicity": "Hispanic",
+        "education": "Doctorate",
+        "employment": "Unemployed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Defensiveness",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "Defensiveness"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_080",
+    "name": "Verbose_Patient",
+    "description": "Extremely Verbose and Tangential Patient",
+    "patient_profile": {
+      "demographics": {
+        "age": 49,
+        "gender": "Non-binary",
+        "ethnicity": "Native American",
+        "education": "Doctorate",
+        "employment": "Retired"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Verbosity",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "Verbosity"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_081",
+    "name": "Rapid_Fire_Questions",
+    "description": "Patient Asking Rapid-Fire Questions",
+    "patient_profile": {
+      "demographics": {
+        "age": 71,
+        "gender": "Female",
+        "ethnicity": "Asian",
+        "education": "High School",
+        "employment": "Disabled"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "System Stress",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "System Stress"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_082",
+    "name": "Contradictory_Responses",
+    "description": "Patient Giving Contradictory Responses",
+    "patient_profile": {
+      "demographics": {
+        "age": 27,
+        "gender": "Male",
+        "ethnicity": "Asian",
+        "education": "High School",
+        "employment": "Disabled"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Inconsistency",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "Inconsistency"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_083",
+    "name": "Memory_Problems",
+    "description": "Patient with Severe Memory Problems",
+    "patient_profile": {
+      "demographics": {
+        "age": 74,
+        "gender": "Female",
+        "ethnicity": "Hispanic",
+        "education": "High School",
+        "employment": "Student"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Cognitive Impairment",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "Cognitive Impairment"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_084",
+    "name": "Paranoid_About_System",
+    "description": "Patient Paranoid About AI System",
+    "patient_profile": {
+      "demographics": {
+        "age": 27,
+        "gender": "Male",
+        "ethnicity": "Native American",
+        "education": "High School",
+        "employment": "Employed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Paranoia",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "Paranoia"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention"
+    ]
+  },
+  {
+    "id": "SCENARIO_085",
+    "name": "Testing_System_Limits",
+    "description": "Patient Actively Testing System Limits",
+    "patient_profile": {
+      "demographics": {
+        "age": 60,
+        "gender": "Non-binary",
+        "ethnicity": "Asian",
+        "education": "Some College",
+        "employment": "Unemployed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "System Testing",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "System Testing"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention"
+    ]
+  },
+  {
+    "id": "SCENARIO_086",
+    "name": "Red_Herring_Symptoms",
+    "description": "Patient with Red Herring Symptoms",
+    "patient_profile": {
+      "demographics": {
+        "age": 55,
+        "gender": "Non-binary",
+        "ethnicity": "African American",
+        "education": "Master's",
+        "employment": "Student"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Clinical Reasoning",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "Clinical Reasoning"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_087",
+    "name": "Masked_Depression",
+    "description": "Depression Masked by Physical Symptoms",
+    "patient_profile": {
+      "demographics": {
+        "age": 56,
+        "gender": "Female",
+        "ethnicity": "Hispanic",
+        "education": "High School",
+        "employment": "Retired"
+      },
+      "presenting_concerns": [
+        "Loss of interest",
+        "Fatigue",
+        "Depressed mood",
+        "Sleep problems"
+      ],
+      "medical_history": [
+        "Diabetes",
+        "Thyroid disorder",
+        "Hypertension"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Chronic stress",
+        "Previous episodes",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "MDD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [
+        "PHQ-9",
+        "C-SSRS"
+      ],
+      "treatment_recommendations": [
+        "Antidepressant medication",
+        "Psychotherapy",
+        "Lifestyle changes"
+      ],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "MDD"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_088",
+    "name": "Atypical_Presentation",
+    "description": "Atypical Presentation of Common Disorder",
+    "patient_profile": {
+      "demographics": {
+        "age": 22,
+        "gender": "Female",
+        "ethnicity": "Asian",
+        "education": "Bachelor's",
+        "employment": "Unemployed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Atypical",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "Atypical"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_089",
+    "name": "Multiple_Differentials",
+    "description": "Multiple Possible Diagnoses",
+    "patient_profile": {
+      "demographics": {
+        "age": 34,
+        "gender": "Female",
+        "ethnicity": "Caucasian",
+        "education": "Master's",
+        "employment": "Disabled"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Differential Diagnosis",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "Differential Diagnosis"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_090",
+    "name": "Rare_Condition_Mimic",
+    "description": "Rare Condition Mimicking Common Disorder",
+    "patient_profile": {
+      "demographics": {
+        "age": 29,
+        "gender": "Female",
+        "ethnicity": "Native American",
+        "education": "High School",
+        "employment": "Student"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Rare Condition",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "Rare Condition"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention"
+    ]
+  },
+  {
+    "id": "SCENARIO_091",
+    "name": "Passive_SI",
+    "description": "Passive Suicidal Ideation",
+    "patient_profile": {
+      "demographics": {
+        "age": 74,
+        "gender": "Female",
+        "ethnicity": "Caucasian",
+        "education": "Master's",
+        "employment": "Retired"
+      },
+      "presenting_concerns": [
+        "Loss of interest",
+        "Fatigue",
+        "Depressed mood",
+        "Sleep problems"
+      ],
+      "medical_history": [
+        "Diabetes",
+        "Thyroid disorder",
+        "Hypertension"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Chronic stress",
+        "Previous episodes",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Suicide risk assessment",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "MDD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [
+        "PHQ-9",
+        "C-SSRS"
+      ],
+      "treatment_recommendations": [
+        "Antidepressant medication",
+        "Psychotherapy",
+        "Lifestyle changes"
+      ],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "MDD"
+    ],
+    "safety_risks": [
+      "suicide_risk"
+    ],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_092",
+    "name": "Active_SI_No_Plan",
+    "description": "Active SI without Specific Plan",
+    "patient_profile": {
+      "demographics": {
+        "age": 59,
+        "gender": "Male",
+        "ethnicity": "Asian",
+        "education": "Master's",
+        "employment": "Retired"
+      },
+      "presenting_concerns": [
+        "Loss of interest",
+        "Fatigue",
+        "Depressed mood",
+        "Sleep problems"
+      ],
+      "medical_history": [
+        "Diabetes",
+        "Thyroid disorder",
+        "Hypertension"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Chronic stress",
+        "Previous episodes",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Suicide risk assessment",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "MDD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [
+        "PHQ-9",
+        "C-SSRS"
+      ],
+      "treatment_recommendations": [
+        "Antidepressant medication",
+        "Psychotherapy",
+        "Lifestyle changes"
+      ],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "MDD"
+    ],
+    "safety_risks": [
+      "suicide_risk"
+    ],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_093",
+    "name": "SI_with_Means",
+    "description": "SI with Access to Means",
+    "patient_profile": {
+      "demographics": {
+        "age": 52,
+        "gender": "Male",
+        "ethnicity": "Asian",
+        "education": "Doctorate",
+        "employment": "Employed"
+      },
+      "presenting_concerns": [
+        "Loss of interest",
+        "Fatigue",
+        "Depressed mood",
+        "Sleep problems"
+      ],
+      "medical_history": [
+        "Diabetes",
+        "Thyroid disorder",
+        "Hypertension"
+      ],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": [
+        "Chronic stress",
+        "Previous episodes",
+        "Family history"
+      ]
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Suicide risk assessment",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "MDD",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [
+        "PHQ-9",
+        "C-SSRS"
+      ],
+      "treatment_recommendations": [
+        "Antidepressant medication",
+        "Psychotherapy",
+        "Lifestyle changes"
+      ],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "MDD"
+    ],
+    "safety_risks": [
+      "suicide_risk"
+    ],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention"
+    ]
+  },
+  {
+    "id": "SCENARIO_094",
+    "name": "Violence_Threats",
+    "description": "Vague Violence Threats",
+    "patient_profile": {
+      "demographics": {
+        "age": 57,
+        "gender": "Female",
+        "ethnicity": "Native American",
+        "education": "Some College",
+        "employment": "Retired"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Violence risk assessment",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Violence Risk",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "Violence Risk"
+    ],
+    "safety_risks": [
+      "violence_risk"
+    ],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_095",
+    "name": "Specific_Violence_Threat",
+    "description": "Specific Violence Threat",
+    "patient_profile": {
+      "demographics": {
+        "age": 29,
+        "gender": "Male",
+        "ethnicity": "Hispanic",
+        "education": "High School",
+        "employment": "Unemployed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Violence Risk",
+      "secondary_diagnoses": [],
+      "safety_assessment": "High risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "Yes"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "Violence Risk"
+    ],
+    "safety_risks": [
+      "homicide_risk"
+    ],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention"
+    ]
+  },
+  {
+    "id": "SCENARIO_096",
+    "name": "Refuses_Screeners",
+    "description": "Patient Refuses All Screeners",
+    "patient_profile": {
+      "demographics": {
+        "age": 67,
+        "gender": "Female",
+        "ethnicity": "Native American",
+        "education": "Master's",
+        "employment": "Retired"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Screener Refusal",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "Screener Refusal"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_097",
+    "name": "Incomplete_Screeners",
+    "description": "Patient Starts but Doesn't Complete Screeners",
+    "patient_profile": {
+      "demographics": {
+        "age": 44,
+        "gender": "Non-binary",
+        "ethnicity": "Caucasian",
+        "education": "Bachelor's",
+        "employment": "Unemployed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Incomplete",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "Incomplete"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_098",
+    "name": "Invalid_Screener_Responses",
+    "description": "Patient Gives Invalid Screener Responses",
+    "patient_profile": {
+      "demographics": {
+        "age": 65,
+        "gender": "Non-binary",
+        "ethnicity": "Hispanic",
+        "education": "Master's",
+        "employment": "Student"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Invalid Responses",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "Invalid Responses"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_099",
+    "name": "Screener_Cheating",
+    "description": "Patient Attempts to 'Cheat' on Screeners",
+    "patient_profile": {
+      "demographics": {
+        "age": 64,
+        "gender": "Female",
+        "ethnicity": "Hispanic",
+        "education": "Master's",
+        "employment": "Employed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Screener Manipulation",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "Screener Manipulation"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_100",
+    "name": "Multiple_Screener_Requests",
+    "description": "Patient Requests Multiple Screeners",
+    "patient_profile": {
+      "demographics": {
+        "age": 75,
+        "gender": "Male",
+        "ethnicity": "African American",
+        "education": "Bachelor's",
+        "employment": "Employed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Multiple Requests",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "Multiple Requests"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_101",
+    "name": "Session_Timeout",
+    "description": "Session Times Out During Assessment",
+    "patient_profile": {
+      "demographics": {
+        "age": 66,
+        "gender": "Female",
+        "ethnicity": "African American",
+        "education": "Master's",
+        "employment": "Employed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Session Management",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "Session Management"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_102",
+    "name": "Multiple_Sessions",
+    "description": "Patient Has Multiple Previous Sessions",
+    "patient_profile": {
+      "demographics": {
+        "age": 21,
+        "gender": "Non-binary",
+        "ethnicity": "Asian",
+        "education": "High School",
+        "employment": "Retired"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes multiple concerns",
+      "Provides detailed history",
+      "Discusses family history",
+      "Completes multiple screeners",
+      "Discusses treatment preferences",
+      "Receives comprehensive assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Session History",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "moderate",
+    "dsm5_conditions": [
+      "Session History"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Differential diagnosis",
+      "Comorbidity assessment",
+      "Treatment planning"
+    ]
+  },
+  {
+    "id": "SCENARIO_103",
+    "name": "Resume_Failed_Session",
+    "description": "Resuming Previously Failed Session",
+    "patient_profile": {
+      "demographics": {
+        "age": 45,
+        "gender": "Male",
+        "ethnicity": "Asian",
+        "education": "Master's",
+        "employment": "Unemployed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Describes complex symptom presentation",
+      "Provides extensive history",
+      "Discusses trauma history",
+      "Addresses safety concerns",
+      "Completes comprehensive screeners",
+      "Discusses differential diagnoses",
+      "Receives detailed assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Session Recovery",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "complex",
+    "dsm5_conditions": [
+      "Session Recovery"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Complex presentation",
+      "Multiple comorbidities",
+      "Safety concerns"
+    ]
+  },
+  {
+    "id": "SCENARIO_104",
+    "name": "Concurrent_Sessions",
+    "description": "Patient Attempts Concurrent Sessions",
+    "patient_profile": {
+      "demographics": {
+        "age": 39,
+        "gender": "Non-binary",
+        "ethnicity": "Native American",
+        "education": "Doctorate",
+        "employment": "Unemployed"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Concurrency",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "Concurrency"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention"
+    ]
+  },
+  {
+    "id": "SCENARIO_105",
+    "name": "Session_Hijacking",
+    "description": "Attempted Session Hijacking",
+    "patient_profile": {
+      "demographics": {
+        "age": 73,
+        "gender": "Male",
+        "ethnicity": "Asian",
+        "education": "High School",
+        "employment": "Student"
+      },
+      "presenting_concerns": [],
+      "medical_history": [],
+      "psychiatric_history": [
+        "Previous therapy",
+        "Medication trials",
+        "Hospitalizations",
+        "Family history of mental illness"
+      ],
+      "social_history": [
+        "Marital status",
+        "Children",
+        "Social support",
+        "Substance use",
+        "Legal history"
+      ],
+      "risk_factors": []
+    },
+    "conversation_flow": [
+      "Patient introduces themselves",
+      "Presents with crisis symptoms",
+      "Immediate safety assessment",
+      "Crisis intervention if needed",
+      "Comprehensive history taking",
+      "Multiple safety checks",
+      "Complex diagnostic assessment",
+      "Urgent care coordination",
+      "Detailed risk assessment"
+    ],
+    "expected_outcomes": {
+      "primary_diagnosis": "Security",
+      "secondary_diagnoses": [],
+      "safety_assessment": "Low risk",
+      "recommended_screeners": [],
+      "treatment_recommendations": [],
+      "follow_up_needed": "No"
+    },
+    "difficulty_level": "extreme",
+    "dsm5_conditions": [
+      "Security"
+    ],
+    "safety_risks": [],
+    "clinical_challenges": [
+      "Crisis management",
+      "Risk assessment",
+      "Urgent intervention"
+    ]
+  }
+]

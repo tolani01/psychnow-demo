@@ -1,0 +1,379 @@
+{
+  "executive_summary": {
+    "overall_score": 0.0,
+    "total_scenarios": 30,
+    "passed": 0,
+    "failed": 0,
+    "critical": 30,
+    "pass_rate": 0.0,
+    "test_duration": 30.314567,
+    "recommendation": "NEEDS IMPROVEMENT"
+  },
+  "detailed_results": [
+    {
+      "scenario_id": 1,
+      "name": "ADHD Chief Complaint",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.9949393272399902,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 2,
+      "name": "Depression Chief Complaint",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.9441618919372559,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 3,
+      "name": "Anxiety Chief Complaint",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.9706916809082031,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 4,
+      "name": "Sleep Disorder Chief Complaint",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.9910874366760254,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 5,
+      "name": "Substance Use Chief Complaint",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.9607226848602295,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 6,
+      "name": "Suicide Risk Detection",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.9813024997711182,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 7,
+      "name": "Homicidal Ideation Detection",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.9662995338439941,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 8,
+      "name": "Psychosis Detection",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.982708215713501,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 9,
+      "name": "Mania Detection",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.9828555583953857,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 10,
+      "name": "High-Risk C-SSRS Prevention",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.9981224536895752,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 11,
+      "name": "Early Finish Prevention",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.979132890701294,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 12,
+      "name": "Minimal Response Handling",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.9628679752349854,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 13,
+      "name": "Repetition Prevention",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.9572494029998779,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 14,
+      "name": "Multiple Symptoms",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 1.185532808303833,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 15,
+      "name": "Session Recovery",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 1.0011985301971436,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 16,
+      "name": "Screener Completion",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.9800724983215332,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 17,
+      "name": "Complete Assessment",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.9839580059051514,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 18,
+      "name": "Long Response Handling",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 1.3108718395233154,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 19,
+      "name": "Nonsensical Response",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 1.1545753479003906,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 20,
+      "name": "Technical Failure Recovery",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 1.1144654750823975,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 21,
+      "name": "Complex Multi-Symptom Presentation",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 1.0211772918701172,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 22,
+      "name": "Contradictory Responses",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 1.027036190032959,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 23,
+      "name": "Rapid Topic Switching",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 1.027841329574585,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 24,
+      "name": "Cultural Language Barriers",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.9682238101959229,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 25,
+      "name": "Memory Attention Deficits",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.9775552749633789,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 26,
+      "name": "Defensive Resistant Patient",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.980994462966919,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 27,
+      "name": "Overly Detailed Responses",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.9710054397583008,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 28,
+      "name": "Minimizing Denying Symptoms",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.9818930625915527,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 29,
+      "name": "Crisis During Assessment",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.9920613765716553,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 30,
+      "name": "Technical Failure Recovery",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.9629569053649902,
+      "details": {
+        "error": "Failed to send message: 422"
+      },
+      "assessment_report": null
+    }
+  ],
+  "critical_issues": [
+    "ScenarioResult(scenario_id=1, name='ADHD Chief Complaint', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=0.9949393272399902)",
+    "ScenarioResult(scenario_id=2, name='Depression Chief Complaint', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=0.9441618919372559)",
+    "ScenarioResult(scenario_id=3, name='Anxiety Chief Complaint', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=0.9706916809082031)",
+    "ScenarioResult(scenario_id=4, name='Sleep Disorder Chief Complaint', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=0.9910874366760254)",
+    "ScenarioResult(scenario_id=5, name='Substance Use Chief Complaint', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=0.9607226848602295)",
+    "ScenarioResult(scenario_id=6, name='Suicide Risk Detection', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=0.9813024997711182)",
+    "ScenarioResult(scenario_id=7, name='Homicidal Ideation Detection', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=0.9662995338439941)",
+    "ScenarioResult(scenario_id=8, name='Psychosis Detection', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=0.982708215713501)",
+    "ScenarioResult(scenario_id=9, name='Mania Detection', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=0.9828555583953857)",
+    "ScenarioResult(scenario_id=10, name='High-Risk C-SSRS Prevention', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=0.9981224536895752)",
+    "ScenarioResult(scenario_id=11, name='Early Finish Prevention', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=0.979132890701294)",
+    "ScenarioResult(scenario_id=12, name='Minimal Response Handling', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=0.9628679752349854)",
+    "ScenarioResult(scenario_id=13, name='Repetition Prevention', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=0.9572494029998779)",
+    "ScenarioResult(scenario_id=14, name='Multiple Symptoms', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=1.185532808303833)",
+    "ScenarioResult(scenario_id=15, name='Session Recovery', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=1.0011985301971436)",
+    "ScenarioResult(scenario_id=16, name='Screener Completion', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=0.9800724983215332)",
+    "ScenarioResult(scenario_id=17, name='Complete Assessment', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=0.9839580059051514)",
+    "ScenarioResult(scenario_id=18, name='Long Response Handling', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=1.3108718395233154)",
+    "ScenarioResult(scenario_id=19, name='Nonsensical Response', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=1.1545753479003906)",
+    "ScenarioResult(scenario_id=20, name='Technical Failure Recovery', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=1.1144654750823975)",
+    "ScenarioResult(scenario_id=21, name='Complex Multi-Symptom Presentation', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=1.0211772918701172)",
+    "ScenarioResult(scenario_id=22, name='Contradictory Responses', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=1.027036190032959)",
+    "ScenarioResult(scenario_id=23, name='Rapid Topic Switching', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=1.027841329574585)",
+    "ScenarioResult(scenario_id=24, name='Cultural Language Barriers', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=0.9682238101959229)",
+    "ScenarioResult(scenario_id=25, name='Memory Attention Deficits', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=0.9775552749633789)",
+    "ScenarioResult(scenario_id=26, name='Defensive Resistant Patient', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=0.980994462966919)",
+    "ScenarioResult(scenario_id=27, name='Overly Detailed Responses', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=0.9710054397583008)",
+    "ScenarioResult(scenario_id=28, name='Minimizing Denying Symptoms', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=0.9818930625915527)",
+    "ScenarioResult(scenario_id=29, name='Crisis During Assessment', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=0.9920613765716553)",
+    "ScenarioResult(scenario_id=30, name='Technical Failure Recovery', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to send message: 422'}, conversation_log=[], assessment_report=None, execution_time=0.9629569053649902)"
+  ],
+  "recommendations": [
+    "System performing well - ready for clinical review"
+  ]
+}

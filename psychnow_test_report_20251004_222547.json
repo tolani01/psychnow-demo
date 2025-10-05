@@ -1,0 +1,379 @@
+{
+  "executive_summary": {
+    "overall_score": 0.0,
+    "total_scenarios": 30,
+    "passed": 0,
+    "failed": 0,
+    "critical": 30,
+    "pass_rate": 0.0,
+    "test_duration": 17.927743,
+    "recommendation": "NEEDS IMPROVEMENT"
+  },
+  "detailed_results": [
+    {
+      "scenario_id": 1,
+      "name": "ADHD Chief Complaint",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.8828670978546143,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 2,
+      "name": "Depression Chief Complaint",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.8478124141693115,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 3,
+      "name": "Anxiety Chief Complaint",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.8956682682037354,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 4,
+      "name": "Sleep Disorder Chief Complaint",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.663707971572876,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 5,
+      "name": "Substance Use Chief Complaint",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.5658671855926514,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 6,
+      "name": "Suicide Risk Detection",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.6350677013397217,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 7,
+      "name": "Homicidal Ideation Detection",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.6017179489135742,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 8,
+      "name": "Psychosis Detection",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.6320946216583252,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 9,
+      "name": "Mania Detection",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.6844487190246582,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 10,
+      "name": "High-Risk C-SSRS Prevention",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.5557265281677246,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 11,
+      "name": "Early Finish Prevention",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.775876522064209,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 12,
+      "name": "Minimal Response Handling",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.5685522556304932,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 13,
+      "name": "Repetition Prevention",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.7310853004455566,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 14,
+      "name": "Multiple Symptoms",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.5853390693664551,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 15,
+      "name": "Session Recovery",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.5666055679321289,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 16,
+      "name": "Screener Completion",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.6492559909820557,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 17,
+      "name": "Complete Assessment",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.5505759716033936,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 18,
+      "name": "Long Response Handling",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.6146519184112549,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 19,
+      "name": "Nonsensical Response",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.5036540031433105,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 20,
+      "name": "Technical Failure Recovery",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.4957098960876465,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 21,
+      "name": "Complex Multi-Symptom Presentation",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.5033528804779053,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 22,
+      "name": "Contradictory Responses",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.4928145408630371,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 23,
+      "name": "Rapid Topic Switching",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.4725067615509033,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 24,
+      "name": "Cultural Language Barriers",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.4850883483886719,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 25,
+      "name": "Memory Attention Deficits",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.49853038787841797,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 26,
+      "name": "Defensive Resistant Patient",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.513296365737915,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 27,
+      "name": "Overly Detailed Responses",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.46970438957214355,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 28,
+      "name": "Minimizing Denying Symptoms",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.4826517105102539,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 29,
+      "name": "Crisis During Assessment",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.515744686126709,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 30,
+      "name": "Technical Failure Recovery",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.48645639419555664,
+      "details": {
+        "error": "Failed to create session: 404"
+      },
+      "assessment_report": null
+    }
+  ],
+  "critical_issues": [
+    "ScenarioResult(scenario_id=1, name='ADHD Chief Complaint', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.8828670978546143)",
+    "ScenarioResult(scenario_id=2, name='Depression Chief Complaint', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.8478124141693115)",
+    "ScenarioResult(scenario_id=3, name='Anxiety Chief Complaint', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.8956682682037354)",
+    "ScenarioResult(scenario_id=4, name='Sleep Disorder Chief Complaint', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.663707971572876)",
+    "ScenarioResult(scenario_id=5, name='Substance Use Chief Complaint', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.5658671855926514)",
+    "ScenarioResult(scenario_id=6, name='Suicide Risk Detection', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.6350677013397217)",
+    "ScenarioResult(scenario_id=7, name='Homicidal Ideation Detection', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.6017179489135742)",
+    "ScenarioResult(scenario_id=8, name='Psychosis Detection', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.6320946216583252)",
+    "ScenarioResult(scenario_id=9, name='Mania Detection', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.6844487190246582)",
+    "ScenarioResult(scenario_id=10, name='High-Risk C-SSRS Prevention', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.5557265281677246)",
+    "ScenarioResult(scenario_id=11, name='Early Finish Prevention', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.775876522064209)",
+    "ScenarioResult(scenario_id=12, name='Minimal Response Handling', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.5685522556304932)",
+    "ScenarioResult(scenario_id=13, name='Repetition Prevention', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.7310853004455566)",
+    "ScenarioResult(scenario_id=14, name='Multiple Symptoms', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.5853390693664551)",
+    "ScenarioResult(scenario_id=15, name='Session Recovery', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.5666055679321289)",
+    "ScenarioResult(scenario_id=16, name='Screener Completion', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.6492559909820557)",
+    "ScenarioResult(scenario_id=17, name='Complete Assessment', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.5505759716033936)",
+    "ScenarioResult(scenario_id=18, name='Long Response Handling', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.6146519184112549)",
+    "ScenarioResult(scenario_id=19, name='Nonsensical Response', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.5036540031433105)",
+    "ScenarioResult(scenario_id=20, name='Technical Failure Recovery', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.4957098960876465)",
+    "ScenarioResult(scenario_id=21, name='Complex Multi-Symptom Presentation', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.5033528804779053)",
+    "ScenarioResult(scenario_id=22, name='Contradictory Responses', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.4928145408630371)",
+    "ScenarioResult(scenario_id=23, name='Rapid Topic Switching', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.4725067615509033)",
+    "ScenarioResult(scenario_id=24, name='Cultural Language Barriers', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.4850883483886719)",
+    "ScenarioResult(scenario_id=25, name='Memory Attention Deficits', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.49853038787841797)",
+    "ScenarioResult(scenario_id=26, name='Defensive Resistant Patient', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.513296365737915)",
+    "ScenarioResult(scenario_id=27, name='Overly Detailed Responses', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.46970438957214355)",
+    "ScenarioResult(scenario_id=28, name='Minimizing Denying Symptoms', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.4826517105102539)",
+    "ScenarioResult(scenario_id=29, name='Crisis During Assessment', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.515744686126709)",
+    "ScenarioResult(scenario_id=30, name='Technical Failure Recovery', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 404'}, conversation_log=[], assessment_report=None, execution_time=0.48645639419555664)"
+  ],
+  "recommendations": [
+    "System performing well - ready for clinical review"
+  ]
+}

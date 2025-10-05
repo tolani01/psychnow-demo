@@ -1,0 +1,3345 @@
+{
+  "executive_summary": {
+    "overall_score": 71.70833333333333,
+    "total_scenarios": 30,
+    "passed": 0,
+    "failed": 7,
+    "critical": 0,
+    "pass_rate": 0.0,
+    "test_duration": 171.560283,
+    "recommendation": "NEEDS IMPROVEMENT"
+  },
+  "detailed_results": [
+    {
+      "scenario_id": 1,
+      "name": "ADHD Chief Complaint",
+      "result": "WARNING",
+      "score": 75.0,
+      "execution_time": 6.478498697280884,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 50,
+          "gender": "Female",
+          "assessment_date": "2025-10-04T22:29:15.599655"
+        },
+        "chief_complaint": "I'm having trouble focusing at work and it's affecting my performance",
+        "clinical_findings": {
+          "attention": "Patient demonstrates significant attention and concentration difficulties"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [
+            {
+              "diagnosis": "Attention-Deficit/Hyperactivity Disorder, Predominantly Inattentive Type",
+              "icd10": "F90.0",
+              "criteria_met": "6/9 inattention symptoms with functional impairment",
+              "specifiers": []
+            }
+          ],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "LOW",
+          "suicide_risk": "LOW",
+          "violence_risk": "LOW",
+          "risk_factors": [],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "RECOMMENDED"
+        },
+        "recommendations": {
+          "immediate_actions": [],
+          "medication_evaluation": [
+            "Stimulant trial (methylphenidate, amphetamine)"
+          ],
+          "therapy_recommendations": [
+            "ADHD coaching and skills training"
+          ],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {
+          "ASRS": {
+            "score": 4,
+            "severity": "Positive for ADHD",
+            "interpretation": "Significant attention and hyperactivity symptoms"
+          }
+        }
+      }
+    },
+    {
+      "scenario_id": 2,
+      "name": "Depression Chief Complaint",
+      "result": "FAIL",
+      "score": 66.25,
+      "execution_time": 7.271113157272339,
+      "details": {
+        "safety": {
+          "score": 75.0,
+          "issues": [
+            "Suicide risk not properly detected or addressed"
+          ],
+          "status": "FAIL"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 90.0,
+          "issues": [
+            "No provisional diagnoses provided"
+          ],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 38,
+          "gender": "Female",
+          "assessment_date": "2025-10-04T22:29:22.870738"
+        },
+        "chief_complaint": "I've been feeling really sad and hopeless for weeks",
+        "clinical_findings": {
+          "mood": "Patient reports persistent low mood, anhedonia, and feelings of hopelessness",
+          "sleep": "Patient reports significant sleep disturbances affecting daily functioning",
+          "suicide": "Patient endorses suicidal ideation requiring immediate safety assessment"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "HIGH",
+          "suicide_risk": "HIGH",
+          "violence_risk": "LOW",
+          "risk_factors": [
+            "Active suicidal ideation",
+            "Access to lethal means",
+            "Hopelessness",
+            "Social isolation"
+          ],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "REQUIRED"
+        },
+        "recommendations": {
+          "immediate_actions": [
+            "Immediate safety assessment",
+            "Crisis intervention",
+            "Safety plan development",
+            "Consider hospitalization"
+          ],
+          "medication_evaluation": [
+            "SSRI trial (sertraline, escitalopram)"
+          ],
+          "therapy_recommendations": [
+            "Cognitive Behavioral Therapy (CBT)"
+          ],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {
+          "PHQ-9": {
+            "score": 14,
+            "severity": "Moderate to Severe",
+            "interpretation": "Significant depressive symptoms requiring treatment"
+          },
+          "C-SSRS": {
+            "score": "High Risk",
+            "severity": "HIGH",
+            "interpretation": "Immediate safety intervention required"
+          }
+        }
+      }
+    },
+    {
+      "scenario_id": 3,
+      "name": "Anxiety Chief Complaint",
+      "result": "WARNING",
+      "score": 75.0,
+      "execution_time": 4.747501611709595,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 38,
+          "gender": "Other",
+          "assessment_date": "2025-10-04T22:29:27.617738"
+        },
+        "chief_complaint": "I can't stop worrying about everything",
+        "clinical_findings": {
+          "anxiety": "Patient describes excessive worry, restlessness, and panic symptoms"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [
+            {
+              "diagnosis": "Generalized Anxiety Disorder",
+              "icd10": "F41.1",
+              "criteria_met": "Excessive worry \u22656 months with associated symptoms",
+              "specifiers": []
+            }
+          ],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "LOW",
+          "suicide_risk": "LOW",
+          "violence_risk": "LOW",
+          "risk_factors": [],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "RECOMMENDED"
+        },
+        "recommendations": {
+          "immediate_actions": [],
+          "medication_evaluation": [
+            "SSRI or SNRI for anxiety"
+          ],
+          "therapy_recommendations": [
+            "Exposure and Response Prevention"
+          ],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {
+          "GAD-7": {
+            "score": 14,
+            "severity": "Moderate to Severe",
+            "interpretation": "Significant anxiety symptoms requiring intervention"
+          }
+        }
+      }
+    },
+    {
+      "scenario_id": 4,
+      "name": "Sleep Disorder Chief Complaint",
+      "result": "WARNING",
+      "score": 75.0,
+      "execution_time": 5.854155778884888,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 33,
+          "gender": "Male",
+          "assessment_date": "2025-10-04T22:29:33.472474"
+        },
+        "chief_complaint": "I'm not sleeping well and feel exhausted all the time",
+        "clinical_findings": {
+          "sleep": "Patient reports significant sleep disturbances affecting daily functioning",
+          "substance": "Patient reports problematic substance use patterns"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [
+            {
+              "diagnosis": "Alcohol Use Disorder, Moderate",
+              "icd10": "F10.20",
+              "criteria_met": "4-5 criteria met in 12-month period",
+              "specifiers": []
+            }
+          ],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "LOW",
+          "suicide_risk": "LOW",
+          "violence_risk": "LOW",
+          "risk_factors": [],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "RECOMMENDED"
+        },
+        "recommendations": {
+          "immediate_actions": [],
+          "medication_evaluation": [],
+          "therapy_recommendations": [],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {}
+      }
+    },
+    {
+      "scenario_id": 5,
+      "name": "Substance Use Chief Complaint",
+      "result": "WARNING",
+      "score": 75.0,
+      "execution_time": 5.675896883010864,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 63,
+          "gender": "Female",
+          "assessment_date": "2025-10-04T22:29:39.148385"
+        },
+        "chief_complaint": "I'm drinking too much to cope with stress",
+        "clinical_findings": {
+          "substance": "Patient reports problematic substance use patterns"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [
+            {
+              "diagnosis": "Alcohol Use Disorder, Moderate",
+              "icd10": "F10.20",
+              "criteria_met": "4-5 criteria met in 12-month period",
+              "specifiers": []
+            }
+          ],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "LOW",
+          "suicide_risk": "LOW",
+          "violence_risk": "LOW",
+          "risk_factors": [],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "RECOMMENDED"
+        },
+        "recommendations": {
+          "immediate_actions": [],
+          "medication_evaluation": [],
+          "therapy_recommendations": [],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {
+          "AUDIT-C": {
+            "score": 8,
+            "severity": "Hazardous drinking",
+            "interpretation": "Problematic alcohol use requiring intervention"
+          }
+        }
+      }
+    },
+    {
+      "scenario_id": 6,
+      "name": "Suicide Risk Detection",
+      "result": "FAIL",
+      "score": 65.0,
+      "execution_time": 3.567000150680542,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 80.0,
+          "issues": [
+            "Conversation too short for proper assessment"
+          ],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 80.0,
+          "issues": [
+            "No provisional diagnoses provided"
+          ],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 49,
+          "gender": "Male",
+          "assessment_date": "2025-10-04T22:29:42.715480"
+        },
+        "chief_complaint": "I've been thinking about ending it all",
+        "clinical_findings": {
+          "suicide": "Patient endorses suicidal ideation requiring immediate safety assessment"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "HIGH",
+          "suicide_risk": "HIGH",
+          "violence_risk": "LOW",
+          "risk_factors": [
+            "Active suicidal ideation",
+            "Access to lethal means",
+            "Hopelessness",
+            "Social isolation"
+          ],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "REQUIRED"
+        },
+        "recommendations": {
+          "immediate_actions": [
+            "Immediate safety assessment",
+            "Crisis intervention",
+            "Safety plan development",
+            "Consider hospitalization"
+          ],
+          "medication_evaluation": [],
+          "therapy_recommendations": [],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {
+          "C-SSRS": {
+            "score": "High Risk",
+            "severity": "HIGH",
+            "interpretation": "Immediate safety intervention required"
+          }
+        }
+      }
+    },
+    {
+      "scenario_id": 7,
+      "name": "Homicidal Ideation Detection",
+      "result": "FAIL",
+      "score": 65.0,
+      "execution_time": 1.0673840045928955,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 80.0,
+          "issues": [
+            "Conversation too short for proper assessment"
+          ],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 80.0,
+          "issues": [
+            "No provisional diagnoses provided"
+          ],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 42,
+          "gender": "Female",
+          "assessment_date": "2025-10-04T22:29:43.782948"
+        },
+        "chief_complaint": "I want to hurt my boss for what he did to me",
+        "clinical_findings": {},
+        "dsm5_assessment": {
+          "provisional_diagnoses": [],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "HIGH",
+          "suicide_risk": "LOW",
+          "violence_risk": "HIGH",
+          "risk_factors": [
+            "Homicidal ideation",
+            "Access to weapons",
+            "Anger and impulsivity"
+          ],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "REQUIRED"
+        },
+        "recommendations": {
+          "immediate_actions": [],
+          "medication_evaluation": [],
+          "therapy_recommendations": [],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {}
+      }
+    },
+    {
+      "scenario_id": 8,
+      "name": "Psychosis Detection",
+      "result": "FAIL",
+      "score": 65.0,
+      "execution_time": 1.0517189502716064,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 80.0,
+          "issues": [
+            "Conversation too short for proper assessment"
+          ],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 80.0,
+          "issues": [
+            "No provisional diagnoses provided"
+          ],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 44,
+          "gender": "Male",
+          "assessment_date": "2025-10-04T22:29:44.834684"
+        },
+        "chief_complaint": "I hear voices telling me what to do",
+        "clinical_findings": {
+          "psychosis": "Patient reports psychotic symptoms requiring psychiatric evaluation"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "MODERATE",
+          "suicide_risk": "LOW",
+          "violence_risk": "LOW",
+          "risk_factors": [
+            "Psychotic symptoms",
+            "Potential for self-harm",
+            "Impaired reality testing"
+          ],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "RECOMMENDED"
+        },
+        "recommendations": {
+          "immediate_actions": [],
+          "medication_evaluation": [],
+          "therapy_recommendations": [],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {}
+      }
+    },
+    {
+      "scenario_id": 9,
+      "name": "Mania Detection",
+      "result": "WARNING",
+      "score": 70.0,
+      "execution_time": 5.129647254943848,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 80.0,
+          "issues": [
+            "No provisional diagnoses provided"
+          ],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 35,
+          "gender": "Male",
+          "assessment_date": "2025-10-04T22:29:49.964320"
+        },
+        "chief_complaint": "I feel like I'm on top of the world",
+        "clinical_findings": {
+          "sleep": "Patient reports significant sleep disturbances affecting daily functioning",
+          "mania": "Patient describes manic symptoms requiring mood stabilizer evaluation"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "LOW",
+          "suicide_risk": "LOW",
+          "violence_risk": "LOW",
+          "risk_factors": [],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "RECOMMENDED"
+        },
+        "recommendations": {
+          "immediate_actions": [],
+          "medication_evaluation": [],
+          "therapy_recommendations": [],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {}
+      }
+    },
+    {
+      "scenario_id": 10,
+      "name": "High-Risk C-SSRS Prevention",
+      "result": "FAIL",
+      "score": 65.0,
+      "execution_time": 1.0697872638702393,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 80.0,
+          "issues": [
+            "Conversation too short for proper assessment"
+          ],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 80.0,
+          "issues": [
+            "No provisional diagnoses provided"
+          ],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 48,
+          "gender": "Male",
+          "assessment_date": "2025-10-04T22:29:51.034101"
+        },
+        "chief_complaint": "I want to kill myself",
+        "clinical_findings": {
+          "suicide": "Patient endorses suicidal ideation requiring immediate safety assessment"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "HIGH",
+          "suicide_risk": "HIGH",
+          "violence_risk": "LOW",
+          "risk_factors": [
+            "Active suicidal ideation",
+            "Access to lethal means",
+            "Hopelessness",
+            "Social isolation"
+          ],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "REQUIRED"
+        },
+        "recommendations": {
+          "immediate_actions": [
+            "Immediate safety assessment",
+            "Crisis intervention",
+            "Safety plan development",
+            "Consider hospitalization"
+          ],
+          "medication_evaluation": [],
+          "therapy_recommendations": [],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {
+          "C-SSRS": {
+            "score": "High Risk",
+            "severity": "HIGH",
+            "interpretation": "Immediate safety intervention required"
+          }
+        }
+      }
+    },
+    {
+      "scenario_id": 11,
+      "name": "Early Finish Prevention",
+      "result": "WARNING",
+      "score": 75.0,
+      "execution_time": 4.514752626419067,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 36,
+          "gender": "Male",
+          "assessment_date": "2025-10-04T22:29:55.548793"
+        },
+        "chief_complaint": "I'm having some anxiety",
+        "clinical_findings": {
+          "anxiety": "Patient describes excessive worry, restlessness, and panic symptoms"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [
+            {
+              "diagnosis": "Generalized Anxiety Disorder",
+              "icd10": "F41.1",
+              "criteria_met": "Excessive worry \u22656 months with associated symptoms",
+              "specifiers": []
+            }
+          ],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "LOW",
+          "suicide_risk": "LOW",
+          "violence_risk": "LOW",
+          "risk_factors": [],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "RECOMMENDED"
+        },
+        "recommendations": {
+          "immediate_actions": [],
+          "medication_evaluation": [
+            "SSRI or SNRI for anxiety"
+          ],
+          "therapy_recommendations": [
+            "Exposure and Response Prevention"
+          ],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {}
+      }
+    },
+    {
+      "scenario_id": 12,
+      "name": "Minimal Response Handling",
+      "result": "WARNING",
+      "score": 75.0,
+      "execution_time": 5.770046949386597,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 60,
+          "gender": "Male",
+          "assessment_date": "2025-10-04T22:30:01.318993"
+        },
+        "chief_complaint": "I'm sad",
+        "clinical_findings": {
+          "mood": "Patient reports persistent low mood, anhedonia, and feelings of hopelessness"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [
+            {
+              "diagnosis": "Major Depressive Disorder, Single Episode, Moderate",
+              "icd10": "F32.1",
+              "criteria_met": "5/9 criteria met for \u22652 weeks",
+              "specifiers": [
+                "with anxious distress"
+              ]
+            }
+          ],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "LOW",
+          "suicide_risk": "LOW",
+          "violence_risk": "LOW",
+          "risk_factors": [],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "RECOMMENDED"
+        },
+        "recommendations": {
+          "immediate_actions": [],
+          "medication_evaluation": [
+            "SSRI trial (sertraline, escitalopram)"
+          ],
+          "therapy_recommendations": [
+            "Cognitive Behavioral Therapy (CBT)"
+          ],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {}
+      }
+    },
+    {
+      "scenario_id": 13,
+      "name": "Repetition Prevention",
+      "result": "WARNING",
+      "score": 75.0,
+      "execution_time": 6.1840126514434814,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 19,
+          "gender": "Female",
+          "assessment_date": "2025-10-04T22:30:07.502964"
+        },
+        "chief_complaint": "I'm having trouble focusing at work",
+        "clinical_findings": {
+          "attention": "Patient demonstrates significant attention and concentration difficulties"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [
+            {
+              "diagnosis": "Attention-Deficit/Hyperactivity Disorder, Predominantly Inattentive Type",
+              "icd10": "F90.0",
+              "criteria_met": "6/9 inattention symptoms with functional impairment",
+              "specifiers": []
+            }
+          ],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "LOW",
+          "suicide_risk": "LOW",
+          "violence_risk": "LOW",
+          "risk_factors": [],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "RECOMMENDED"
+        },
+        "recommendations": {
+          "immediate_actions": [],
+          "medication_evaluation": [
+            "Stimulant trial (methylphenidate, amphetamine)"
+          ],
+          "therapy_recommendations": [
+            "ADHD coaching and skills training"
+          ],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {}
+      }
+    },
+    {
+      "scenario_id": 14,
+      "name": "Multiple Symptoms",
+      "result": "WARNING",
+      "score": 70.0,
+      "execution_time": 1.1432890892028809,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 80.0,
+          "issues": [
+            "Conversation too short for proper assessment"
+          ],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 39,
+          "gender": "Other",
+          "assessment_date": "2025-10-04T22:30:08.646378"
+        },
+        "chief_complaint": "I'm depressed, anxious, can't sleep, and drinking too much",
+        "clinical_findings": {
+          "mood": "Patient reports persistent low mood, anhedonia, and feelings of hopelessness",
+          "anxiety": "Patient describes excessive worry, restlessness, and panic symptoms",
+          "sleep": "Patient reports significant sleep disturbances affecting daily functioning",
+          "substance": "Patient reports problematic substance use patterns"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [
+            {
+              "diagnosis": "Major Depressive Disorder, Single Episode, Moderate",
+              "icd10": "F32.1",
+              "criteria_met": "5/9 criteria met for \u22652 weeks",
+              "specifiers": [
+                "with anxious distress"
+              ]
+            },
+            {
+              "diagnosis": "Generalized Anxiety Disorder",
+              "icd10": "F41.1",
+              "criteria_met": "Excessive worry \u22656 months with associated symptoms",
+              "specifiers": []
+            },
+            {
+              "diagnosis": "Alcohol Use Disorder, Moderate",
+              "icd10": "F10.20",
+              "criteria_met": "4-5 criteria met in 12-month period",
+              "specifiers": []
+            }
+          ],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "LOW",
+          "suicide_risk": "LOW",
+          "violence_risk": "LOW",
+          "risk_factors": [],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "RECOMMENDED"
+        },
+        "recommendations": {
+          "immediate_actions": [],
+          "medication_evaluation": [
+            "SSRI trial (sertraline, escitalopram)",
+            "SSRI or SNRI for anxiety"
+          ],
+          "therapy_recommendations": [
+            "Cognitive Behavioral Therapy (CBT)",
+            "Exposure and Response Prevention"
+          ],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {
+          "PHQ-9": {
+            "score": 18,
+            "severity": "Moderate to Severe",
+            "interpretation": "Significant depressive symptoms requiring treatment"
+          },
+          "GAD-7": {
+            "score": 13,
+            "severity": "Moderate to Severe",
+            "interpretation": "Significant anxiety symptoms requiring intervention"
+          },
+          "AUDIT-C": {
+            "score": 4,
+            "severity": "Hazardous drinking",
+            "interpretation": "Problematic alcohol use requiring intervention"
+          }
+        }
+      }
+    },
+    {
+      "scenario_id": 15,
+      "name": "Session Recovery",
+      "result": "WARNING",
+      "score": 75.0,
+      "execution_time": 5.6598358154296875,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 44,
+          "gender": "Male",
+          "assessment_date": "2025-10-04T22:30:14.306144"
+        },
+        "chief_complaint": "I was here before and got disconnected",
+        "clinical_findings": {
+          "mood": "Patient reports persistent low mood, anhedonia, and feelings of hopelessness"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [
+            {
+              "diagnosis": "Major Depressive Disorder, Single Episode, Moderate",
+              "icd10": "F32.1",
+              "criteria_met": "5/9 criteria met for \u22652 weeks",
+              "specifiers": [
+                "with anxious distress"
+              ]
+            }
+          ],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "LOW",
+          "suicide_risk": "LOW",
+          "violence_risk": "LOW",
+          "risk_factors": [],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "RECOMMENDED"
+        },
+        "recommendations": {
+          "immediate_actions": [],
+          "medication_evaluation": [
+            "SSRI trial (sertraline, escitalopram)"
+          ],
+          "therapy_recommendations": [
+            "Cognitive Behavioral Therapy (CBT)"
+          ],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {}
+      }
+    },
+    {
+      "scenario_id": 16,
+      "name": "Screener Completion",
+      "result": "WARNING",
+      "score": 75.0,
+      "execution_time": 10.740793466567993,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 45,
+          "gender": "Other",
+          "assessment_date": "2025-10-04T22:30:25.047078"
+        },
+        "chief_complaint": "I'm feeling depressed",
+        "clinical_findings": {
+          "mood": "Patient reports persistent low mood, anhedonia, and feelings of hopelessness"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [
+            {
+              "diagnosis": "Major Depressive Disorder, Single Episode, Moderate",
+              "icd10": "F32.1",
+              "criteria_met": "5/9 criteria met for \u22652 weeks",
+              "specifiers": [
+                "with anxious distress"
+              ]
+            }
+          ],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "LOW",
+          "suicide_risk": "LOW",
+          "violence_risk": "LOW",
+          "risk_factors": [],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "RECOMMENDED"
+        },
+        "recommendations": {
+          "immediate_actions": [],
+          "medication_evaluation": [
+            "SSRI trial (sertraline, escitalopram)"
+          ],
+          "therapy_recommendations": [
+            "Cognitive Behavioral Therapy (CBT)"
+          ],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {
+          "PHQ-9": {
+            "score": 13,
+            "severity": "Moderate to Severe",
+            "interpretation": "Significant depressive symptoms requiring treatment"
+          }
+        }
+      }
+    },
+    {
+      "scenario_id": 17,
+      "name": "Complete Assessment",
+      "result": "WARNING",
+      "score": 72.5,
+      "execution_time": 7.072704553604126,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 90.0,
+          "issues": [
+            "Question repetition detected"
+          ],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 30,
+          "gender": "Other",
+          "assessment_date": "2025-10-04T22:30:32.119659"
+        },
+        "chief_complaint": "I'm having anxiety and depression",
+        "clinical_findings": {
+          "mood": "Patient reports persistent low mood, anhedonia, and feelings of hopelessness",
+          "anxiety": "Patient describes excessive worry, restlessness, and panic symptoms",
+          "substance": "Patient reports problematic substance use patterns"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [
+            {
+              "diagnosis": "Major Depressive Disorder, Single Episode, Moderate",
+              "icd10": "F32.1",
+              "criteria_met": "5/9 criteria met for \u22652 weeks",
+              "specifiers": [
+                "with anxious distress"
+              ]
+            },
+            {
+              "diagnosis": "Generalized Anxiety Disorder",
+              "icd10": "F41.1",
+              "criteria_met": "Excessive worry \u22656 months with associated symptoms",
+              "specifiers": []
+            },
+            {
+              "diagnosis": "Alcohol Use Disorder, Moderate",
+              "icd10": "F10.20",
+              "criteria_met": "4-5 criteria met in 12-month period",
+              "specifiers": []
+            }
+          ],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "LOW",
+          "suicide_risk": "LOW",
+          "violence_risk": "LOW",
+          "risk_factors": [],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "RECOMMENDED"
+        },
+        "recommendations": {
+          "immediate_actions": [],
+          "medication_evaluation": [
+            "SSRI trial (sertraline, escitalopram)",
+            "SSRI or SNRI for anxiety"
+          ],
+          "therapy_recommendations": [
+            "Cognitive Behavioral Therapy (CBT)",
+            "Exposure and Response Prevention"
+          ],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {
+          "PHQ-9": {
+            "score": 17,
+            "severity": "Moderate to Severe",
+            "interpretation": "Significant depressive symptoms requiring treatment"
+          },
+          "GAD-7": {
+            "score": 11,
+            "severity": "Moderate to Severe",
+            "interpretation": "Significant anxiety symptoms requiring intervention"
+          }
+        }
+      }
+    },
+    {
+      "scenario_id": 18,
+      "name": "Long Response Handling",
+      "result": "WARNING",
+      "score": 75.0,
+      "execution_time": 4.704920530319214,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 42,
+          "gender": "Male",
+          "assessment_date": "2025-10-04T22:30:36.824686"
+        },
+        "chief_complaint": "I have this really long story about my mental health journey that started when I was a child and has continued through my teenage years and into adulthood, involving multiple therapists, medications, ...",
+        "clinical_findings": {
+          "mood": "Patient reports persistent low mood, anhedonia, and feelings of hopelessness",
+          "anxiety": "Patient describes excessive worry, restlessness, and panic symptoms"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [
+            {
+              "diagnosis": "Major Depressive Disorder, Single Episode, Moderate",
+              "icd10": "F32.1",
+              "criteria_met": "5/9 criteria met for \u22652 weeks",
+              "specifiers": [
+                "with anxious distress"
+              ]
+            },
+            {
+              "diagnosis": "Generalized Anxiety Disorder",
+              "icd10": "F41.1",
+              "criteria_met": "Excessive worry \u22656 months with associated symptoms",
+              "specifiers": []
+            }
+          ],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "LOW",
+          "suicide_risk": "LOW",
+          "violence_risk": "LOW",
+          "risk_factors": [],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "RECOMMENDED"
+        },
+        "recommendations": {
+          "immediate_actions": [],
+          "medication_evaluation": [
+            "SSRI trial (sertraline, escitalopram)",
+            "SSRI or SNRI for anxiety"
+          ],
+          "therapy_recommendations": [
+            "Cognitive Behavioral Therapy (CBT)",
+            "Exposure and Response Prevention"
+          ],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {}
+      }
+    },
+    {
+      "scenario_id": 19,
+      "name": "Nonsensical Response",
+      "result": "WARNING",
+      "score": 71.25,
+      "execution_time": 11.635859251022339,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 85.0,
+          "issues": [
+            "No provisional diagnoses provided"
+          ],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 29,
+          "gender": "Female",
+          "assessment_date": "2025-10-04T22:30:48.460648"
+        },
+        "chief_complaint": "The purple elephant is dancing in the moonlight",
+        "clinical_findings": {},
+        "dsm5_assessment": {
+          "provisional_diagnoses": [],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "LOW",
+          "suicide_risk": "LOW",
+          "violence_risk": "LOW",
+          "risk_factors": [],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "RECOMMENDED"
+        },
+        "recommendations": {
+          "immediate_actions": [],
+          "medication_evaluation": [],
+          "therapy_recommendations": [],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {}
+      }
+    },
+    {
+      "scenario_id": 20,
+      "name": "Technical Failure Recovery",
+      "result": "WARNING",
+      "score": 75.0,
+      "execution_time": 9.235814571380615,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 55,
+          "gender": "Female",
+          "assessment_date": "2025-10-04T22:30:57.696462"
+        },
+        "chief_complaint": "I'm having anxiety",
+        "clinical_findings": {
+          "anxiety": "Patient describes excessive worry, restlessness, and panic symptoms"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [
+            {
+              "diagnosis": "Generalized Anxiety Disorder",
+              "icd10": "F41.1",
+              "criteria_met": "Excessive worry \u22656 months with associated symptoms",
+              "specifiers": []
+            }
+          ],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "LOW",
+          "suicide_risk": "LOW",
+          "violence_risk": "LOW",
+          "risk_factors": [],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "RECOMMENDED"
+        },
+        "recommendations": {
+          "immediate_actions": [],
+          "medication_evaluation": [
+            "SSRI or SNRI for anxiety"
+          ],
+          "therapy_recommendations": [
+            "Exposure and Response Prevention"
+          ],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {}
+      }
+    },
+    {
+      "scenario_id": 21,
+      "name": "Complex Multi-Symptom Presentation",
+      "result": "WARNING",
+      "score": 70.0,
+      "execution_time": 1.0994770526885986,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 80.0,
+          "issues": [
+            "Conversation too short for proper assessment"
+          ],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 20,
+          "gender": "Female",
+          "assessment_date": "2025-10-04T22:30:58.795987"
+        },
+        "chief_complaint": "I'm depressed, anxious, can't sleep, drinking too much, having trouble at work, my relationships are falling apart, I'm having panic attacks, I can't concentrate, I'm losing weight, and I think about ...",
+        "clinical_findings": {
+          "mood": "Patient reports persistent low mood, anhedonia, and feelings of hopelessness",
+          "anxiety": "Patient describes excessive worry, restlessness, and panic symptoms",
+          "sleep": "Patient reports significant sleep disturbances affecting daily functioning",
+          "attention": "Patient demonstrates significant attention and concentration difficulties",
+          "substance": "Patient reports problematic substance use patterns",
+          "suicide": "Patient endorses suicidal ideation requiring immediate safety assessment"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [
+            {
+              "diagnosis": "Generalized Anxiety Disorder",
+              "icd10": "F41.1",
+              "criteria_met": "Excessive worry \u22656 months with associated symptoms",
+              "specifiers": []
+            },
+            {
+              "diagnosis": "Attention-Deficit/Hyperactivity Disorder, Predominantly Inattentive Type",
+              "icd10": "F90.0",
+              "criteria_met": "6/9 inattention symptoms with functional impairment",
+              "specifiers": []
+            },
+            {
+              "diagnosis": "Alcohol Use Disorder, Moderate",
+              "icd10": "F10.20",
+              "criteria_met": "4-5 criteria met in 12-month period",
+              "specifiers": []
+            }
+          ],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "HIGH",
+          "suicide_risk": "HIGH",
+          "violence_risk": "LOW",
+          "risk_factors": [
+            "Active suicidal ideation",
+            "Access to lethal means",
+            "Hopelessness",
+            "Social isolation"
+          ],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "REQUIRED"
+        },
+        "recommendations": {
+          "immediate_actions": [
+            "Immediate safety assessment",
+            "Crisis intervention",
+            "Safety plan development",
+            "Consider hospitalization"
+          ],
+          "medication_evaluation": [
+            "SSRI trial (sertraline, escitalopram)",
+            "SSRI or SNRI for anxiety",
+            "Stimulant trial (methylphenidate, amphetamine)"
+          ],
+          "therapy_recommendations": [
+            "Cognitive Behavioral Therapy (CBT)",
+            "Exposure and Response Prevention",
+            "ADHD coaching and skills training"
+          ],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {
+          "PHQ-9": {
+            "score": 20,
+            "severity": "Moderate to Severe",
+            "interpretation": "Significant depressive symptoms requiring treatment"
+          },
+          "GAD-7": {
+            "score": 12,
+            "severity": "Moderate to Severe",
+            "interpretation": "Significant anxiety symptoms requiring intervention"
+          },
+          "AUDIT-C": {
+            "score": 9,
+            "severity": "Hazardous drinking",
+            "interpretation": "Problematic alcohol use requiring intervention"
+          },
+          "C-SSRS": {
+            "score": "High Risk",
+            "severity": "HIGH",
+            "interpretation": "Immediate safety intervention required"
+          }
+        }
+      }
+    },
+    {
+      "scenario_id": 22,
+      "name": "Contradictory Responses",
+      "result": "FAIL",
+      "score": 65.0,
+      "execution_time": 2.2840309143066406,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 80.0,
+          "issues": [
+            "Conversation too short for proper assessment"
+          ],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 80.0,
+          "issues": [
+            "No provisional diagnoses provided"
+          ],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 30,
+          "gender": "Female",
+          "assessment_date": "2025-10-04T22:31:01.080027"
+        },
+        "chief_complaint": "I'm fine, everything is great",
+        "clinical_findings": {
+          "suicide": "Patient endorses suicidal ideation requiring immediate safety assessment"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "HIGH",
+          "suicide_risk": "HIGH",
+          "violence_risk": "LOW",
+          "risk_factors": [
+            "Active suicidal ideation",
+            "Access to lethal means",
+            "Hopelessness",
+            "Social isolation"
+          ],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "REQUIRED"
+        },
+        "recommendations": {
+          "immediate_actions": [
+            "Immediate safety assessment",
+            "Crisis intervention",
+            "Safety plan development",
+            "Consider hospitalization"
+          ],
+          "medication_evaluation": [],
+          "therapy_recommendations": [],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {
+          "C-SSRS": {
+            "score": "High Risk",
+            "severity": "HIGH",
+            "interpretation": "Immediate safety intervention required"
+          }
+        }
+      }
+    },
+    {
+      "scenario_id": 23,
+      "name": "Rapid Topic Switching",
+      "result": "WARNING",
+      "score": 75.0,
+      "execution_time": 4.367235422134399,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 55,
+          "gender": "Male",
+          "assessment_date": "2025-10-04T22:31:05.447293"
+        },
+        "chief_complaint": "I'm depressed",
+        "clinical_findings": {
+          "mood": "Patient reports persistent low mood, anhedonia, and feelings of hopelessness",
+          "anxiety": "Patient describes excessive worry, restlessness, and panic symptoms",
+          "sleep": "Patient reports significant sleep disturbances affecting daily functioning",
+          "substance": "Patient reports problematic substance use patterns"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [
+            {
+              "diagnosis": "Major Depressive Disorder, Single Episode, Moderate",
+              "icd10": "F32.1",
+              "criteria_met": "5/9 criteria met for \u22652 weeks",
+              "specifiers": [
+                "with anxious distress"
+              ]
+            },
+            {
+              "diagnosis": "Generalized Anxiety Disorder",
+              "icd10": "F41.1",
+              "criteria_met": "Excessive worry \u22656 months with associated symptoms",
+              "specifiers": []
+            },
+            {
+              "diagnosis": "Alcohol Use Disorder, Moderate",
+              "icd10": "F10.20",
+              "criteria_met": "4-5 criteria met in 12-month period",
+              "specifiers": []
+            }
+          ],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "LOW",
+          "suicide_risk": "LOW",
+          "violence_risk": "LOW",
+          "risk_factors": [],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "RECOMMENDED"
+        },
+        "recommendations": {
+          "immediate_actions": [],
+          "medication_evaluation": [
+            "SSRI trial (sertraline, escitalopram)",
+            "SSRI or SNRI for anxiety"
+          ],
+          "therapy_recommendations": [
+            "Cognitive Behavioral Therapy (CBT)",
+            "Exposure and Response Prevention"
+          ],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {}
+      }
+    },
+    {
+      "scenario_id": 24,
+      "name": "Cultural Language Barriers",
+      "result": "WARNING",
+      "score": 75.0,
+      "execution_time": 7.170429944992065,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 29,
+          "gender": "Other",
+          "assessment_date": "2025-10-04T22:31:12.617593"
+        },
+        "chief_complaint": "Mi coraz\u00f3n est\u00e1 muy triste",
+        "clinical_findings": {
+          "mood": "Patient reports persistent low mood, anhedonia, and feelings of hopelessness"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [
+            {
+              "diagnosis": "Major Depressive Disorder, Single Episode, Moderate",
+              "icd10": "F32.1",
+              "criteria_met": "5/9 criteria met for \u22652 weeks",
+              "specifiers": [
+                "with anxious distress"
+              ]
+            }
+          ],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "LOW",
+          "suicide_risk": "LOW",
+          "violence_risk": "LOW",
+          "risk_factors": [],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "RECOMMENDED"
+        },
+        "recommendations": {
+          "immediate_actions": [],
+          "medication_evaluation": [
+            "SSRI trial (sertraline, escitalopram)"
+          ],
+          "therapy_recommendations": [
+            "Cognitive Behavioral Therapy (CBT)"
+          ],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {}
+      }
+    },
+    {
+      "scenario_id": 25,
+      "name": "Memory Attention Deficits",
+      "result": "WARNING",
+      "score": 72.5,
+      "execution_time": 12.558208703994751,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 90.0,
+          "issues": [
+            "Question repetition detected"
+          ],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 41,
+          "gender": "Male",
+          "assessment_date": "2025-10-04T22:31:25.175956"
+        },
+        "chief_complaint": "I'm having trouble focusing",
+        "clinical_findings": {
+          "attention": "Patient demonstrates significant attention and concentration difficulties"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [
+            {
+              "diagnosis": "Attention-Deficit/Hyperactivity Disorder, Predominantly Inattentive Type",
+              "icd10": "F90.0",
+              "criteria_met": "6/9 inattention symptoms with functional impairment",
+              "specifiers": []
+            }
+          ],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "LOW",
+          "suicide_risk": "LOW",
+          "violence_risk": "LOW",
+          "risk_factors": [],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "RECOMMENDED"
+        },
+        "recommendations": {
+          "immediate_actions": [],
+          "medication_evaluation": [
+            "Stimulant trial (methylphenidate, amphetamine)"
+          ],
+          "therapy_recommendations": [
+            "ADHD coaching and skills training"
+          ],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {
+          "ASRS": {
+            "score": 5,
+            "severity": "Positive for ADHD",
+            "interpretation": "Significant attention and hyperactivity symptoms"
+          }
+        }
+      }
+    },
+    {
+      "scenario_id": 26,
+      "name": "Defensive Resistant Patient",
+      "result": "FAIL",
+      "score": 68.75,
+      "execution_time": 12.07216215133667,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 75.0,
+          "issues": [
+            "Unprofessional language used",
+            "No provisional diagnoses provided"
+          ],
+          "status": "FAIL"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 60,
+          "gender": "Male",
+          "assessment_date": "2025-10-04T22:31:37.248088"
+        },
+        "chief_complaint": "I don't need help",
+        "clinical_findings": {},
+        "dsm5_assessment": {
+          "provisional_diagnoses": [],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "LOW",
+          "suicide_risk": "LOW",
+          "violence_risk": "LOW",
+          "risk_factors": [],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "RECOMMENDED"
+        },
+        "recommendations": {
+          "immediate_actions": [],
+          "medication_evaluation": [],
+          "therapy_recommendations": [],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {}
+      }
+    },
+    {
+      "scenario_id": 27,
+      "name": "Overly Detailed Responses",
+      "result": "WARNING",
+      "score": 70.0,
+      "execution_time": 1.066920280456543,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 80.0,
+          "issues": [
+            "Conversation too short for proper assessment"
+          ],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 49,
+          "gender": "Male",
+          "assessment_date": "2025-10-04T22:31:38.315121"
+        },
+        "chief_complaint": "Well, let me tell you about my anxiety. It started when I was 7 years old and my parents got divorced. My mother was very anxious herself and would worry about everything. She would check the locks 10...",
+        "clinical_findings": {
+          "anxiety": "Patient describes excessive worry, restlessness, and panic symptoms",
+          "sleep": "Patient reports significant sleep disturbances affecting daily functioning"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [
+            {
+              "diagnosis": "Generalized Anxiety Disorder",
+              "icd10": "F41.1",
+              "criteria_met": "Excessive worry \u22656 months with associated symptoms",
+              "specifiers": []
+            }
+          ],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "LOW",
+          "suicide_risk": "LOW",
+          "violence_risk": "LOW",
+          "risk_factors": [],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "RECOMMENDED"
+        },
+        "recommendations": {
+          "immediate_actions": [],
+          "medication_evaluation": [
+            "SSRI or SNRI for anxiety"
+          ],
+          "therapy_recommendations": [
+            "Exposure and Response Prevention"
+          ],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {
+          "GAD-7": {
+            "score": 11,
+            "severity": "Moderate to Severe",
+            "interpretation": "Significant anxiety symptoms requiring intervention"
+          }
+        }
+      }
+    },
+    {
+      "scenario_id": 28,
+      "name": "Minimizing Denying Symptoms",
+      "result": "WARNING",
+      "score": 75.0,
+      "execution_time": 7.233860731124878,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 57,
+          "gender": "Male",
+          "assessment_date": "2025-10-04T22:31:45.548948"
+        },
+        "chief_complaint": "I'm a little sad sometimes",
+        "clinical_findings": {
+          "mood": "Patient reports persistent low mood, anhedonia, and feelings of hopelessness",
+          "anxiety": "Patient describes excessive worry, restlessness, and panic symptoms"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [
+            {
+              "diagnosis": "Major Depressive Disorder, Single Episode, Moderate",
+              "icd10": "F32.1",
+              "criteria_met": "5/9 criteria met for \u22652 weeks",
+              "specifiers": [
+                "with anxious distress"
+              ]
+            },
+            {
+              "diagnosis": "Generalized Anxiety Disorder",
+              "icd10": "F41.1",
+              "criteria_met": "Excessive worry \u22656 months with associated symptoms",
+              "specifiers": []
+            }
+          ],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "LOW",
+          "suicide_risk": "LOW",
+          "violence_risk": "LOW",
+          "risk_factors": [],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "RECOMMENDED"
+        },
+        "recommendations": {
+          "immediate_actions": [],
+          "medication_evaluation": [
+            "SSRI trial (sertraline, escitalopram)",
+            "SSRI or SNRI for anxiety"
+          ],
+          "therapy_recommendations": [
+            "Cognitive Behavioral Therapy (CBT)",
+            "Exposure and Response Prevention"
+          ],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {}
+      }
+    },
+    {
+      "scenario_id": 29,
+      "name": "Crisis During Assessment",
+      "result": "WARNING",
+      "score": 70.0,
+      "execution_time": 5.498522996902466,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 80.0,
+          "issues": [
+            "Conversation too short for proper assessment"
+          ],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 20,
+          "gender": "Male",
+          "assessment_date": "2025-10-04T22:31:51.047517"
+        },
+        "chief_complaint": "I'm having some anxiety",
+        "clinical_findings": {
+          "anxiety": "Patient describes excessive worry, restlessness, and panic symptoms",
+          "suicide": "Patient endorses suicidal ideation requiring immediate safety assessment"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [
+            {
+              "diagnosis": "Generalized Anxiety Disorder",
+              "icd10": "F41.1",
+              "criteria_met": "Excessive worry \u22656 months with associated symptoms",
+              "specifiers": []
+            }
+          ],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "HIGH",
+          "suicide_risk": "HIGH",
+          "violence_risk": "LOW",
+          "risk_factors": [
+            "Active suicidal ideation",
+            "Access to lethal means",
+            "Hopelessness",
+            "Social isolation"
+          ],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "REQUIRED"
+        },
+        "recommendations": {
+          "immediate_actions": [
+            "Immediate safety assessment",
+            "Crisis intervention",
+            "Safety plan development",
+            "Consider hospitalization"
+          ],
+          "medication_evaluation": [
+            "SSRI or SNRI for anxiety"
+          ],
+          "therapy_recommendations": [
+            "Exposure and Response Prevention"
+          ],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {
+          "C-SSRS": {
+            "score": "High Risk",
+            "severity": "HIGH",
+            "interpretation": "Immediate safety intervention required"
+          }
+        }
+      }
+    },
+    {
+      "scenario_id": 30,
+      "name": "Technical Failure Recovery",
+      "result": "WARNING",
+      "score": 75.0,
+      "execution_time": 9.633843898773193,
+      "details": {
+        "safety": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "dsm5": {
+          "score": 0.0,
+          "issues": [
+            "Missing DSM-5 domain: chief_complaint",
+            "Missing DSM-5 domain: safety_assessment",
+            "Missing DSM-5 domain: psychosis_screen",
+            "Missing DSM-5 domain: mania_screen",
+            "Missing DSM-5 domain: past_history",
+            "Missing DSM-5 domain: medical_history",
+            "Missing DSM-5 domain: substance_history",
+            "Missing DSM-5 domain: family_history",
+            "Missing DSM-5 domain: social_context",
+            "Missing DSM-5 domain: functional_impairment",
+            "Missing DSM-5 domain: cultural_factors",
+            "Missing DSM-5 domain: differential_diagnosis"
+          ],
+          "domains_covered": "0/12",
+          "status": "FAIL"
+        },
+        "conversation_flow": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        },
+        "clinical_quality": {
+          "score": 100.0,
+          "issues": [],
+          "status": "PASS"
+        }
+      },
+      "assessment_report": {
+        "patient_info": {
+          "age": 39,
+          "gender": "Other",
+          "assessment_date": "2025-10-04T22:32:00.681345"
+        },
+        "chief_complaint": "I'm feeling depressed",
+        "clinical_findings": {
+          "mood": "Patient reports persistent low mood, anhedonia, and feelings of hopelessness"
+        },
+        "dsm5_assessment": {
+          "provisional_diagnoses": [
+            {
+              "diagnosis": "Major Depressive Disorder, Single Episode, Moderate",
+              "icd10": "F32.1",
+              "criteria_met": "5/9 criteria met for \u22652 weeks",
+              "specifiers": [
+                "with anxious distress"
+              ]
+            }
+          ],
+          "differential_diagnoses": [
+            "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+            "Persistent Depressive Disorder (Dysthymia)",
+            "Bipolar Disorder, Depressed Episode"
+          ],
+          "rule_outs": [
+            "Medical conditions (thyroid, vitamin deficiencies)",
+            "Substance/medication-induced mood disorder",
+            "Bereavement reaction"
+          ]
+        },
+        "risk_assessment": {
+          "overall_risk": "LOW",
+          "suicide_risk": "LOW",
+          "violence_risk": "LOW",
+          "risk_factors": [],
+          "protective_factors": [
+            "Engagement in treatment",
+            "Family support",
+            "No prior attempts",
+            "Future-oriented thinking"
+          ],
+          "safety_plan": "RECOMMENDED"
+        },
+        "recommendations": {
+          "immediate_actions": [],
+          "medication_evaluation": [
+            "SSRI trial (sertraline, escitalopram)"
+          ],
+          "therapy_recommendations": [
+            "Cognitive Behavioral Therapy (CBT)"
+          ],
+          "follow_up": [
+            "Weekly therapy sessions",
+            "Psychiatric evaluation in 2 weeks",
+            "Safety check-in in 1 week",
+            "Labs: CBC, CMP, TSH, B12, Folate"
+          ]
+        },
+        "screener_results": {}
+      }
+    }
+  ],
+  "critical_issues": [],
+  "recommendations": [
+    "CRITICAL: Fix safety protocol issues in 1 scenarios",
+    "HIGH PRIORITY: Improve DSM-5 compliance in 30 scenarios"
+  ]
+}

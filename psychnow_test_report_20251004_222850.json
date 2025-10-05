@@ -1,0 +1,379 @@
+{
+  "executive_summary": {
+    "overall_score": 0.0,
+    "total_scenarios": 30,
+    "passed": 0,
+    "failed": 0,
+    "critical": 30,
+    "pass_rate": 0.0,
+    "test_duration": 64.242155,
+    "recommendation": "NEEDS IMPROVEMENT"
+  },
+  "detailed_results": [
+    {
+      "scenario_id": 1,
+      "name": "ADHD Chief Complaint",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 4.480255842208862,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 2,
+      "name": "Depression Chief Complaint",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 2.1856744289398193,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 3,
+      "name": "Anxiety Chief Complaint",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 2.481527805328369,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 4,
+      "name": "Sleep Disorder Chief Complaint",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 2.2135047912597656,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 5,
+      "name": "Substance Use Chief Complaint",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 4.977548599243164,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 6,
+      "name": "Suicide Risk Detection",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 3.2237448692321777,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 7,
+      "name": "Homicidal Ideation Detection",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 1.0744976997375488,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 8,
+      "name": "Psychosis Detection",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 1.0736134052276611,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 9,
+      "name": "Mania Detection",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 2.095017910003662,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 10,
+      "name": "High-Risk C-SSRS Prevention",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 1.0880885124206543,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 11,
+      "name": "Early Finish Prevention",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 1.9333562850952148,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 12,
+      "name": "Minimal Response Handling",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 2.0589711666107178,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 13,
+      "name": "Repetition Prevention",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 1.8617732524871826,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 14,
+      "name": "Multiple Symptoms",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 1.3778395652770996,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 15,
+      "name": "Session Recovery",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 2.0093324184417725,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 16,
+      "name": "Screener Completion",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 2.1916682720184326,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 17,
+      "name": "Complete Assessment",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 2.135875940322876,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 18,
+      "name": "Long Response Handling",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 2.406200647354126,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 19,
+      "name": "Nonsensical Response",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 1.8401157855987549,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 20,
+      "name": "Technical Failure Recovery",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 2.042421817779541,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 21,
+      "name": "Complex Multi-Symptom Presentation",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 1.1590495109558105,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 22,
+      "name": "Contradictory Responses",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 1.8425259590148926,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 23,
+      "name": "Rapid Topic Switching",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 2.1816933155059814,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 24,
+      "name": "Cultural Language Barriers",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 1.9471259117126465,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 25,
+      "name": "Memory Attention Deficits",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 1.9338548183441162,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 26,
+      "name": "Defensive Resistant Patient",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 2.211135149002075,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 27,
+      "name": "Overly Detailed Responses",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 1.0845484733581543,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 28,
+      "name": "Minimizing Denying Symptoms",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 1.861783504486084,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 29,
+      "name": "Crisis During Assessment",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 2.819046974182129,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 30,
+      "name": "Technical Failure Recovery",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 2.4489879608154297,
+      "details": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "assessment_report": null
+    }
+  ],
+  "critical_issues": [
+    "ScenarioResult(scenario_id=1, name='ADHD Chief Complaint', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=4.480255842208862)",
+    "ScenarioResult(scenario_id=2, name='Depression Chief Complaint', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=2.1856744289398193)",
+    "ScenarioResult(scenario_id=3, name='Anxiety Chief Complaint', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=2.481527805328369)",
+    "ScenarioResult(scenario_id=4, name='Sleep Disorder Chief Complaint', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=2.2135047912597656)",
+    "ScenarioResult(scenario_id=5, name='Substance Use Chief Complaint', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=4.977548599243164)",
+    "ScenarioResult(scenario_id=6, name='Suicide Risk Detection', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=3.2237448692321777)",
+    "ScenarioResult(scenario_id=7, name='Homicidal Ideation Detection', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=1.0744976997375488)",
+    "ScenarioResult(scenario_id=8, name='Psychosis Detection', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=1.0736134052276611)",
+    "ScenarioResult(scenario_id=9, name='Mania Detection', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=2.095017910003662)",
+    "ScenarioResult(scenario_id=10, name='High-Risk C-SSRS Prevention', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=1.0880885124206543)",
+    "ScenarioResult(scenario_id=11, name='Early Finish Prevention', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=1.9333562850952148)",
+    "ScenarioResult(scenario_id=12, name='Minimal Response Handling', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=2.0589711666107178)",
+    "ScenarioResult(scenario_id=13, name='Repetition Prevention', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=1.8617732524871826)",
+    "ScenarioResult(scenario_id=14, name='Multiple Symptoms', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=1.3778395652770996)",
+    "ScenarioResult(scenario_id=15, name='Session Recovery', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=2.0093324184417725)",
+    "ScenarioResult(scenario_id=16, name='Screener Completion', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=2.1916682720184326)",
+    "ScenarioResult(scenario_id=17, name='Complete Assessment', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=2.135875940322876)",
+    "ScenarioResult(scenario_id=18, name='Long Response Handling', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=2.406200647354126)",
+    "ScenarioResult(scenario_id=19, name='Nonsensical Response', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=1.8401157855987549)",
+    "ScenarioResult(scenario_id=20, name='Technical Failure Recovery', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=2.042421817779541)",
+    "ScenarioResult(scenario_id=21, name='Complex Multi-Symptom Presentation', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=1.1590495109558105)",
+    "ScenarioResult(scenario_id=22, name='Contradictory Responses', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=1.8425259590148926)",
+    "ScenarioResult(scenario_id=23, name='Rapid Topic Switching', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=2.1816933155059814)",
+    "ScenarioResult(scenario_id=24, name='Cultural Language Barriers', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=1.9471259117126465)",
+    "ScenarioResult(scenario_id=25, name='Memory Attention Deficits', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=1.9338548183441162)",
+    "ScenarioResult(scenario_id=26, name='Defensive Resistant Patient', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=2.211135149002075)",
+    "ScenarioResult(scenario_id=27, name='Overly Detailed Responses', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=1.0845484733581543)",
+    "ScenarioResult(scenario_id=28, name='Minimizing Denying Symptoms', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=1.861783504486084)",
+    "ScenarioResult(scenario_id=29, name='Crisis During Assessment', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=2.819046974182129)",
+    "ScenarioResult(scenario_id=30, name='Technical Failure Recovery', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Expecting value: line 1 column 1 (char 0)'}, conversation_log=[], assessment_report=None, execution_time=2.4489879608154297)"
+  ],
+  "recommendations": [
+    "System performing well - ready for clinical review"
+  ]
+}

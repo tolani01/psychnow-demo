@@ -1,0 +1,379 @@
+{
+  "executive_summary": {
+    "overall_score": 0.0,
+    "total_scenarios": 30,
+    "passed": 0,
+    "failed": 0,
+    "critical": 30,
+    "pass_rate": 0.0,
+    "test_duration": 16.852843,
+    "recommendation": "NEEDS IMPROVEMENT"
+  },
+  "detailed_results": [
+    {
+      "scenario_id": 1,
+      "name": "ADHD Chief Complaint",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.9061675071716309,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 2,
+      "name": "Depression Chief Complaint",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.799191951751709,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 3,
+      "name": "Anxiety Chief Complaint",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.78125,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 4,
+      "name": "Sleep Disorder Chief Complaint",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.6707625389099121,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 5,
+      "name": "Substance Use Chief Complaint",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.7138931751251221,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 6,
+      "name": "Suicide Risk Detection",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.5850327014923096,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 7,
+      "name": "Homicidal Ideation Detection",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.6133525371551514,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 8,
+      "name": "Psychosis Detection",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.5665698051452637,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 9,
+      "name": "Mania Detection",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.5656414031982422,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 10,
+      "name": "High-Risk C-SSRS Prevention",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.53592848777771,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 11,
+      "name": "Early Finish Prevention",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.5297315120697021,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 12,
+      "name": "Minimal Response Handling",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.5867631435394287,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 13,
+      "name": "Repetition Prevention",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.4837827682495117,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 14,
+      "name": "Multiple Symptoms",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.4810616970062256,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 15,
+      "name": "Session Recovery",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.4841294288635254,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 16,
+      "name": "Screener Completion",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.4673178195953369,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 17,
+      "name": "Complete Assessment",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.4830806255340576,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 18,
+      "name": "Long Response Handling",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.4837832450866699,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 19,
+      "name": "Nonsensical Response",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.46444106101989746,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 20,
+      "name": "Technical Failure Recovery",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.5019557476043701,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 21,
+      "name": "Complex Multi-Symptom Presentation",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.48404526710510254,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 22,
+      "name": "Contradictory Responses",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.5415968894958496,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 23,
+      "name": "Rapid Topic Switching",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.4908623695373535,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 24,
+      "name": "Cultural Language Barriers",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.48476219177246094,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 25,
+      "name": "Memory Attention Deficits",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.5066399574279785,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 26,
+      "name": "Defensive Resistant Patient",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.4743809700012207,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 27,
+      "name": "Overly Detailed Responses",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.6168162822723389,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 28,
+      "name": "Minimizing Denying Symptoms",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.532541036605835,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 29,
+      "name": "Crisis During Assessment",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.5015480518341064,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    },
+    {
+      "scenario_id": 30,
+      "name": "Technical Failure Recovery",
+      "result": "CRITICAL",
+      "score": 0.0,
+      "execution_time": 0.5146539211273193,
+      "details": {
+        "error": "Failed to create session: 422"
+      },
+      "assessment_report": null
+    }
+  ],
+  "critical_issues": [
+    "ScenarioResult(scenario_id=1, name='ADHD Chief Complaint', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.9061675071716309)",
+    "ScenarioResult(scenario_id=2, name='Depression Chief Complaint', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.799191951751709)",
+    "ScenarioResult(scenario_id=3, name='Anxiety Chief Complaint', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.78125)",
+    "ScenarioResult(scenario_id=4, name='Sleep Disorder Chief Complaint', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.6707625389099121)",
+    "ScenarioResult(scenario_id=5, name='Substance Use Chief Complaint', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.7138931751251221)",
+    "ScenarioResult(scenario_id=6, name='Suicide Risk Detection', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.5850327014923096)",
+    "ScenarioResult(scenario_id=7, name='Homicidal Ideation Detection', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.6133525371551514)",
+    "ScenarioResult(scenario_id=8, name='Psychosis Detection', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.5665698051452637)",
+    "ScenarioResult(scenario_id=9, name='Mania Detection', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.5656414031982422)",
+    "ScenarioResult(scenario_id=10, name='High-Risk C-SSRS Prevention', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.53592848777771)",
+    "ScenarioResult(scenario_id=11, name='Early Finish Prevention', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.5297315120697021)",
+    "ScenarioResult(scenario_id=12, name='Minimal Response Handling', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.5867631435394287)",
+    "ScenarioResult(scenario_id=13, name='Repetition Prevention', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.4837827682495117)",
+    "ScenarioResult(scenario_id=14, name='Multiple Symptoms', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.4810616970062256)",
+    "ScenarioResult(scenario_id=15, name='Session Recovery', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.4841294288635254)",
+    "ScenarioResult(scenario_id=16, name='Screener Completion', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.4673178195953369)",
+    "ScenarioResult(scenario_id=17, name='Complete Assessment', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.4830806255340576)",
+    "ScenarioResult(scenario_id=18, name='Long Response Handling', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.4837832450866699)",
+    "ScenarioResult(scenario_id=19, name='Nonsensical Response', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.46444106101989746)",
+    "ScenarioResult(scenario_id=20, name='Technical Failure Recovery', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.5019557476043701)",
+    "ScenarioResult(scenario_id=21, name='Complex Multi-Symptom Presentation', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.48404526710510254)",
+    "ScenarioResult(scenario_id=22, name='Contradictory Responses', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.5415968894958496)",
+    "ScenarioResult(scenario_id=23, name='Rapid Topic Switching', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.4908623695373535)",
+    "ScenarioResult(scenario_id=24, name='Cultural Language Barriers', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.48476219177246094)",
+    "ScenarioResult(scenario_id=25, name='Memory Attention Deficits', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.5066399574279785)",
+    "ScenarioResult(scenario_id=26, name='Defensive Resistant Patient', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.4743809700012207)",
+    "ScenarioResult(scenario_id=27, name='Overly Detailed Responses', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.6168162822723389)",
+    "ScenarioResult(scenario_id=28, name='Minimizing Denying Symptoms', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.532541036605835)",
+    "ScenarioResult(scenario_id=29, name='Crisis During Assessment', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.5015480518341064)",
+    "ScenarioResult(scenario_id=30, name='Technical Failure Recovery', result=<TestResult.CRITICAL: 'CRITICAL'>, score=0.0, details={'error': 'Failed to create session: 422'}, conversation_log=[], assessment_report=None, execution_time=0.5146539211273193)"
+  ],
+  "recommendations": [
+    "System performing well - ready for clinical review"
+  ]
+}
