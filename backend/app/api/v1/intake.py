@@ -11,7 +11,6 @@ from datetime import datetime, timedelta
 import secrets
 import logging
 
-from app.db.session import get_db
 from app.schemas.intake import (
     IntakeSessionCreate,
     IntakeSessionResponse,
@@ -19,23 +18,44 @@ from app.schemas.intake import (
     ChatResponse,
     FinishIntakeRequest
 )
-from app.models.intake_session import IntakeSession
-from app.models.intake_report import IntakeReport
 from app.services.conversation_service import conversation_service
-from app.services.report_service import report_service
-from app.services.escalation_service import escalation_service
-from app.services.pdf_service import pdf_service
-from app.services.session_cleanup_service import session_cleanup_service
-from app.services.email_service import email_service
-from app.core.deps import get_current_user_optional
 from app.core.rate_limit import (
     limiter, 
     get_chat_rate_limit, 
     get_start_rate_limit, 
     get_pause_resume_rate_limit
 )
-from app.models.user import User
 from typing import Optional
+
+# Import these only when needed to avoid loading database dependencies
+def _get_db_dependencies():
+    """Lazy load database dependencies"""
+    try:
+        from app.db.session import get_db
+        from app.models.intake_session import IntakeSession
+        from app.models.intake_report import IntakeReport
+        from app.services.report_service import report_service
+        from app.services.escalation_service import escalation_service
+        from app.services.pdf_service import pdf_service
+        from app.services.session_cleanup_service import session_cleanup_service
+        from app.services.email_service import email_service
+        from app.core.deps import get_current_user_optional
+        from app.models.user import User
+        return {
+            'get_db': get_db,
+            'IntakeSession': IntakeSession,
+            'IntakeReport': IntakeReport,
+            'report_service': report_service,
+            'escalation_service': escalation_service,
+            'pdf_service': pdf_service,
+            'session_cleanup_service': session_cleanup_service,
+            'email_service': email_service,
+            'get_current_user_optional': get_current_user_optional,
+            'User': User
+        }
+    except Exception as e:
+        logger.error(f"Failed to load database dependencies: {e}")
+        return None
 
 router = APIRouter()
 logger = logging.getLogger(__name__)
@@ -88,38 +108,23 @@ async def recover_session(session_token: str, db: Session = Depends(get_db)):
 @limiter.limit(get_start_rate_limit)
 async def start_intake_session(
     request: Request,
-    session_data: IntakeSessionCreate,
-    db: Session = Depends(get_db)
+    session_data: IntakeSessionCreate
 ):
     """
     Start a new intake session
     
     Returns session token for anonymous access
     """
-    # Create session in conversation service
-    conv_session = conversation_service.create_session(
-        patient_id=session_data.patient_id,
-        user_name=session_data.user_name
-    )
-    
-    # Try to create database record (graceful failure)
     try:
-        db_session = IntakeSession(
-            session_token=conv_session["session_token"],
+        # Create session in conversation service (no database required)
+        conv_session = conversation_service.create_session(
             patient_id=session_data.patient_id,
-            current_phase=conv_session["current_phase"],
-            conversation_history=[],
-            status="active"
+            user_name=session_data.user_name
         )
         
-        db.add(db_session)
-        db.commit()
-        db.refresh(db_session)
-        logger.info(f"Database session created: {conv_session['session_token']}")
-        return db_session
-    except Exception as e:
-        logger.warning(f"Database session creation failed: {e}. Running in database-less mode.")
-        # Return session response without database dependency
+        logger.info(f"Session created: {conv_session['session_token']}")
+        
+        # Always return in-memory session (database optional for now)
         return IntakeSessionResponse(
             id=1,
             session_token=conv_session["session_token"],
@@ -127,55 +132,32 @@ async def start_intake_session(
             current_phase=conv_session["current_phase"],
             status="active"
         )
+    except Exception as e:
+        logger.error(f"Session creation failed: {e}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Failed to create session: {str(e)}"
+        )
 
 
 @router.post("/chat")
 @limiter.limit(get_chat_rate_limit)
 async def chat(
     request: Request,
-    chat_request: ChatRequest,
-    db: Session = Depends(get_db),
-    current_user: Optional[User] = Depends(get_current_user_optional)
+    chat_request: ChatRequest
 ):
     """
     Send a message and receive streaming AI response
     
     Uses Server-Sent Events (SSE) for streaming
     """
-    # Verify session exists in database
-    db_session = db.query(IntakeSession).filter(
-        IntakeSession.session_token == chat_request.session_token
-    ).first()
-    
-    if not db_session:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail="Session not found in database"
-        )
-    
-    # Get or recreate in-memory session
+    # Get in-memory session (no database required)
     session = conversation_service.get_session(chat_request.session_token)
-    if not session:
-        # Recreate from database
-        session = {
-            "session_token": db_session.session_token,
-            "patient_id": db_session.patient_id,
-            "created_at": db_session.created_at.isoformat(),
-            "current_phase": db_session.current_phase or "greeting",
-            "conversation_history": db_session.conversation_history or [],
-            "extracted_data": db_session.extracted_data or {},
-            "screeners_completed": [],
-            "screener_scores": db_session.screener_scores or {},
-            "risk_flags": db_session.risk_flags or [],
-            "symptoms_detected": {}
-        }
-        conversation_service.sessions[chat_request.session_token] = session
     
-    # Now session is guaranteed to exist
     if not session:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail="Session not found"
+            detail="Session not found. Please start a new session."
         )
     
     # Handle initial greeting (empty prompt)
