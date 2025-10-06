@@ -60,7 +60,7 @@ async def submit_feedback(
             'submitted_at': datetime.utcnow()
         })()
         
-        # Send email notification to admin
+        # Send email notification to admin (non-blocking)
         try:
             # Convert feedback to dict for email
             feedback_dict = {
@@ -78,11 +78,12 @@ async def submit_feedback(
                 'tester_name': feedback.tester_name,
                 'submitted_at': datetime.utcnow().isoformat()
             }
-            email_service.send_feedback_submission_email(feedback_dict)
-            logger.info(f"✅ Feedback email sent for session {feedback.session_id}")
+            # Fire-and-forget to avoid blocking the HTTP response on SMTP latency
+            import asyncio
+            asyncio.create_task(asyncio.to_thread(email_service.send_feedback_submission_email, feedback_dict))
         except Exception as email_error:
-            logger.error(f"⚠️ Failed to send feedback email: {str(email_error)}")
-            # Don't fail the request if email fails
+            logger.error(f"⚠️ Failed to schedule feedback email: {str(email_error)}")
+            # Do not block or fail the request if scheduling fails
         
         logger.info(f"✅ Feedback submitted successfully for session {feedback.session_id}")
         

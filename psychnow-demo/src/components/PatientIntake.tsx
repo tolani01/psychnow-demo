@@ -31,6 +31,7 @@ export default function PatientIntake() {
   
   const sessionRef = useRef<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const navigateScheduledRef = useRef<boolean>(false);
 
   useEffect(() => {
     const checkAndRecoverSession = async () => {
@@ -303,6 +304,19 @@ export default function PatientIntake() {
       if (reader) {
         let fullResponse = '';
         let isFirstChunk = true;
+        const tryScheduleNavigate = (patientPdf?: string | null, clinicianPdf?: string | null) => {
+          if (navigateScheduledRef.current || !sessionRef.current) return;
+          navigateScheduledRef.current = true;
+          setTimeout(() => {
+            navigate(`/complete?sessionId=${encodeURIComponent(sessionRef.current as string)}`, {
+              state: {
+                sessionId: sessionRef.current,
+                patientPdf: patientPdf || patientPdfBase64 || null,
+                clinicianPdf: clinicianPdf || clinicianPdfBase64 || null
+              }
+            });
+          }, 1500);
+        };
 
         while (true) {
           const { done, value } = await reader.read();
@@ -372,6 +386,10 @@ export default function PatientIntake() {
                     }
                     return newMessages;
                   });
+                  // If both PDFs are present, schedule navigation (fallback for Safari/iOS streaming quirks)
+                  if ((data.patient_pdf || patientPdfBase64) && (data.clinician_pdf || clinicianPdfBase64)) {
+                    tryScheduleNavigate(data.patient_pdf, data.clinician_pdf);
+                  }
                 }
                 
                 if (data.clinician_pdf) {
@@ -385,6 +403,9 @@ export default function PatientIntake() {
                     }
                     return newMessages;
                   });
+                  if ((data.patient_pdf || patientPdfBase64) && (data.clinician_pdf || clinicianPdfBase64)) {
+                    tryScheduleNavigate(data.patient_pdf, data.clinician_pdf);
+                  }
                 }
                 
                 // Legacy support for single PDF
@@ -407,25 +428,21 @@ export default function PatientIntake() {
                   
                   if (fullResponse.includes('Thank you for completing the assessment') || fullResponse.includes('Assessment complete') || fullResponse.includes('Assessment Summary')) {
                     setFinished(true);
-                    
-                    // Navigate to feedback page after a short delay (with or without PDFs)
-                    setTimeout(() => {
-                      if (sessionRef.current) {
-                        navigate('/complete', {
-                          state: {
-                            sessionId: sessionRef.current,
-                            patientPdf: data.patient_pdf || patientPdfBase64 || null,
-                            clinicianPdf: data.clinician_pdf || clinicianPdfBase64 || null
-                          }
-                        });
-                      }
-                    }, 1500);
+                    tryScheduleNavigate(data.patient_pdf, data.clinician_pdf);
                   }
                   
                   if (fullResponse.includes('error while generating your report') || 
                       fullResponse.includes('Error generating report')) {
                     setReportGenerationFailed(true);
                   }
+                }
+                // Fallback: if we see the completion phrase but no done flag (Safari/iOS), navigate after a short delay
+                if (!navigateScheduledRef.current && (fullResponse.includes('Assessment complete') || fullResponse.includes('Assessment Summary'))) {
+                  setTimeout(() => {
+                    if (!navigateScheduledRef.current) {
+                      tryScheduleNavigate();
+                    }
+                  }, 2500);
                 }
               } catch (e) {
                 // Ignore parsing errors

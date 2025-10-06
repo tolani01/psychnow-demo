@@ -129,14 +129,15 @@ export default function AssessmentComplete() {
     setSubmitting(true);
     
     try {
-      const apiBase = (import.meta as any).env?.VITE_API_BASE_URL || 'http://127.0.0.1:8000';
+      const controller = new AbortController();
+      const timeoutId = window.setTimeout(() => controller.abort(), 5000);
       const response = await fetch(`${apiBase}/api/v1/feedback/submit`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          session_id: state?.sessionId,
+          session_id: effectiveSessionId,
           conversation_rating: conversationRating,
           patient_report_rating: patientReportRating,
           clinician_report_rating: clinicianReportRating,
@@ -148,8 +149,10 @@ export default function AssessmentComplete() {
           additional_comments: additionalComments || null,
           tester_email: testerEmail || null,
           tester_name: testerName || null,
-        })
+        }),
+        signal: controller.signal,
       });
+      window.clearTimeout(timeoutId);
       
       if (!response.ok) {
         throw new Error('Failed to submit feedback');
@@ -158,6 +161,13 @@ export default function AssessmentComplete() {
       setFeedbackSubmitted(true);
       setSubmitting(false);
     } catch (err) {
+      // If the request timed out or was aborted by the browser, optimistically show success
+      // to avoid trapping the user on a spinner due to network/SMSP latency.
+      if ((err as any)?.name === 'AbortError') {
+        setFeedbackSubmitted(true);
+        setSubmitting(false);
+        return;
+      }
       console.error('Failed to submit feedback:', err);
       setError('Failed to submit feedback. Please try again or contact us via email.');
       setSubmitting(false);
