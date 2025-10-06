@@ -48,6 +48,7 @@ class ChatResponse(BaseModel):
     pdf_report: Optional[str] = None  # Base64 encoded PDF report (legacy/patient)
     patient_pdf: Optional[str] = None  # Base64 encoded patient PDF
     clinician_pdf: Optional[str] = None  # Base64 encoded clinician PDF
+    completion_status: Optional[str] = None  # For completion progress tracking
 
 
 class FinishIntakeRequest(BaseModel):

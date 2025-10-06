@@ -13,6 +13,7 @@ interface ChatMessage {
   pdf_report?: string;  // Legacy
   patient_pdf?: string;  // Patient version
   clinician_pdf?: string;  // Clinician version
+  completion_status?: string;  // For completion progress tracking
 }
 
 export default function PatientIntake() {
@@ -25,6 +26,8 @@ export default function PatientIntake() {
   const [reportGenerationFailed, setReportGenerationFailed] = useState(false);
   const [patientPdfBase64, setPatientPdfBase64] = useState<string>('');
   const [clinicianPdfBase64, setClinicianPdfBase64] = useState<string>('');
+  const [completionStatus, setCompletionStatus] = useState<string>('');
+  const [isInitializing, setIsInitializing] = useState<boolean>(false);
   
   const sessionRef = useRef<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -38,29 +41,31 @@ export default function PatientIntake() {
       
       if (urlSessionId || storedSessionId) {
         const sessionToUse = urlSessionId || storedSessionId;
-        setSessionId(sessionToUse.slice(0, 8)); // Display version
-        sessionRef.current = sessionToUse; // Full token for API calls
-        
-        // Try to recover the session
-        try {
-          const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/v1/intake/session/${sessionToUse}/recover`);
+        if (sessionToUse) {
+          setSessionId(sessionToUse.slice(0, 8)); // Display version
+          sessionRef.current = sessionToUse; // Full token for API calls
           
-          if (response.ok) {
-            const data = await response.json();
-            pushSys(`✅ Welcome back! Resuming your assessment from where you left off...`, new Date().toISOString());
+          // Try to recover the session
+          try {
+            const response = await fetch(`${(import.meta as any).env.VITE_API_BASE_URL}/api/v1/intake/session/${sessionToUse}/recover`);
             
-            // Restore conversation history
-            if (data.conversation_history && data.conversation_history.length > 0) {
-              setMessages(data.conversation_history);
+            if (response.ok) {
+              const data = await response.json();
+              pushSys(`✅ Welcome back! Resuming your assessment from where you left off...`, new Date().toISOString());
+              
+              // Restore conversation history
+              if (data.conversation_history && data.conversation_history.length > 0) {
+                setMessages(data.conversation_history);
+              }
+            } else {
+              // Recovery failed, start new session
+              initSession();
             }
-          } else {
+          } catch (error) {
+            console.error('Recovery error:', error);
             // Recovery failed, start new session
             initSession();
           }
-        } catch (error) {
-          console.error('Recovery error:', error);
-          // Recovery failed, start new session
-          initSession();
         }
       } else {
         // Start new session
@@ -79,7 +84,7 @@ export default function PatientIntake() {
   useEffect(() => {
     const pingBackend = async () => {
       try {
-        const apiBase = window.location.hostname === 'localhost' ? 'http://127.0.0.1:8002' : 'https://psychnow-api.onrender.com';
+        const apiBase = window.location.hostname === 'localhost' ? 'http://127.0.0.1:8000' : 'https://psychnow-api.onrender.com';
         await fetch(`${apiBase}/health`);
         console.log('✅ Backend ping successful - keeping alive');
       } catch (error) {
@@ -98,7 +103,7 @@ export default function PatientIntake() {
     if (!sessionRef.current) return;
     
     try {
-      const apiBase = window.location.hostname === 'localhost' ? 'http://127.0.0.1:8002' : 'https://psychnow-api.onrender.com';
+      const apiBase = window.location.hostname === 'localhost' ? 'http://127.0.0.1:8000' : 'https://psychnow-api.onrender.com';
       const res = await fetch(`${apiBase}/api/v1/intake/chat`, {
         method: 'POST',
         headers: {
@@ -162,8 +167,11 @@ export default function PatientIntake() {
   const initSession = async () => {
     const userId = `demo_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     
+    // Show initialization message
+    setIsInitializing(true);
+    
     try {
-      const apiBase = window.location.hostname === 'localhost' ? 'http://127.0.0.1:8002' : 'https://psychnow-api.onrender.com';
+      const apiBase = window.location.hostname === 'localhost' ? 'http://127.0.0.1:8000' : 'https://psychnow-api.onrender.com';
       const res = await fetch(`${apiBase}/api/v1/intake/start`, {
         method: 'POST',
         headers: {
@@ -187,9 +195,11 @@ export default function PatientIntake() {
       localStorage.setItem('psychnow_session_id', data.session_token);
       
       await getInitialGreeting();
+      setIsInitializing(false);
       
     } catch (err) {
       console.error('Failed to start session:', err);
+      setIsInitializing(false);
       pushSys('⚠️ Failed to start session. Please refresh the page and try again.', new Date().toISOString());
     }
   };
@@ -232,6 +242,7 @@ export default function PatientIntake() {
     if (busy) return;
     
     setBusy(true);
+    setCompletionStatus('starting');
     await sendMessageToBackend(":finish");
   };
 
@@ -240,7 +251,7 @@ export default function PatientIntake() {
     
     try {
       setBusy(true);
-      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/v1/intake/session/${sessionRef.current}/recover`);
+      const response = await fetch(`${(import.meta as any).env.VITE_API_BASE_URL}/api/v1/intake/session/${sessionRef.current}/recover`);
       
       if (response.ok) {
         const data = await response.json();
@@ -266,7 +277,7 @@ export default function PatientIntake() {
 
   const sendMessageToBackend = async (prompt: string) => {
     try {
-      const apiBase = window.location.hostname === 'localhost' ? 'http://127.0.0.1:8002' : 'https://psychnow-api.onrender.com';
+      const apiBase = window.location.hostname === 'localhost' ? 'http://127.0.0.1:8000' : 'https://psychnow-api.onrender.com';
       const res = await fetch(`${apiBase}/api/v1/intake/chat`, {
         method: 'POST',
         headers: {
@@ -310,11 +321,17 @@ export default function PatientIntake() {
                 if (data.content) {
                   fullResponse += data.content;
                   
+                  // Handle completion status
+                  if (data.completion_status) {
+                    setCompletionStatus(data.completion_status);
+                  }
+                  
                   if (isFirstChunk) {
                     setMessages(prev => [...prev, {
                       type: 'system',
                       content: data.content,
                       timestamp: new Date().toISOString(),
+                      completion_status: data.completion_status,
                     }]);
                     isFirstChunk = false;
                   } else {
@@ -323,6 +340,9 @@ export default function PatientIntake() {
                       const lastMessage = newMessages[newMessages.length - 1];
                       if (lastMessage && lastMessage.type === 'system') {
                         lastMessage.content = fullResponse;
+                        if (data.completion_status) {
+                          lastMessage.completion_status = data.completion_status;
+                        }
                       }
                       return newMessages;
                     });
@@ -383,6 +403,7 @@ export default function PatientIntake() {
                 
                 if (data.done) {
                   setBusy(false);
+                  setCompletionStatus(''); // Clear completion status when done
                   
                   if (fullResponse.includes('Thank you for completing the assessment') || fullResponse.includes('Assessment complete') || fullResponse.includes('Assessment Summary')) {
                     setFinished(true);
@@ -574,17 +595,65 @@ Your session ID is: \`${sessionId}\` (save this if you need to resume later)`, n
               </div>
             </div>
           ))}
+          {isInitializing && (
+            <div className="text-center text-gray-600 py-12">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
+              <p className="text-lg font-medium">Preparing your mental health assessment...</p>
+              <p className="text-sm text-gray-500 mt-2">Ava will be ready shortly</p>
+            </div>
+          )}
+          {messages.length === 0 && !busy && !isInitializing && (
+            <div className="text-center text-gray-500 py-8">
+              <p>Click "Start Assessment" to begin your mental health screening.</p>
+            </div>
+          )}
           {busy && (
             <div>
               <ChatBubble type="system">
-                <div className="flex items-center space-x-2">
-                  <div className="flex space-x-1">
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                {completionStatus ? (
+                  // Completion progress UI
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+                        <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
+                      </div>
+                      <span className="text-sm font-medium text-blue-700">Completing Assessment</span>
+                    </div>
+                    
+                    <div className="space-y-2 text-sm">
+                      <div className={`flex items-center space-x-2 ${completionStatus === 'processing' || completionStatus === 'generating_report' || completionStatus === 'generating_pdf' || completionStatus === 'finalizing' || completionStatus === 'completed' ? 'text-green-600' : 'text-gray-400'}`}>
+                        <span>{completionStatus === 'processing' || completionStatus === 'generating_report' || completionStatus === 'generating_pdf' || completionStatus === 'finalizing' || completionStatus === 'completed' ? '✅' : '⏳'}</span>
+                        <span>Analyzing your responses</span>
+                      </div>
+                      <div className={`flex items-center space-x-2 ${completionStatus === 'generating_report' || completionStatus === 'generating_pdf' || completionStatus === 'finalizing' || completionStatus === 'completed' ? 'text-green-600' : 'text-gray-400'}`}>
+                        <span>{completionStatus === 'generating_report' || completionStatus === 'generating_pdf' || completionStatus === 'finalizing' || completionStatus === 'completed' ? '✅' : '⏳'}</span>
+                        <span>Generating personalized report</span>
+                      </div>
+                      <div className={`flex items-center space-x-2 ${completionStatus === 'generating_pdf' || completionStatus === 'finalizing' || completionStatus === 'completed' ? 'text-green-600' : 'text-gray-400'}`}>
+                        <span>{completionStatus === 'generating_pdf' || completionStatus === 'finalizing' || completionStatus === 'completed' ? '✅' : '⏳'}</span>
+                        <span>Creating downloadable PDF</span>
+                      </div>
+                      <div className={`flex items-center space-x-2 ${completionStatus === 'finalizing' || completionStatus === 'completed' ? 'text-green-600' : 'text-gray-400'}`}>
+                        <span>{completionStatus === 'finalizing' || completionStatus === 'completed' ? '✅' : '⏳'}</span>
+                        <span>Finalizing everything</span>
+                      </div>
+                    </div>
+                    
+                    <div className="text-xs text-gray-500 mt-2">
+                      This usually takes 30-60 seconds...
+                    </div>
                   </div>
-                  <span className="text-sm text-gray-500">Ava is thinking...</span>
-                </div>
+                ) : (
+                  // Regular thinking UI
+                  <div className="flex items-center space-x-2">
+                    <div className="flex space-x-1">
+                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                    </div>
+                    <span className="text-sm text-gray-500">Ava is thinking...</span>
+                  </div>
+                )}
               </ChatBubble>
             </div>
           )}

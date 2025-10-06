@@ -9,7 +9,7 @@ export default function DemoLanding() {
   useEffect(() => {
     const pingBackend = async () => {
       try {
-        const apiBase = window.location.hostname === 'localhost' ? 'http://127.0.0.1:8002' : 'https://psychnow-api.onrender.com';
+        const apiBase = window.location.hostname === 'localhost' ? 'http://127.0.0.1:8000' : 'https://psychnow-api.onrender.com';
         await fetch(`${apiBase}/health`);
         console.log('✅ Backend ping successful - keeping alive');
       } catch (error) {

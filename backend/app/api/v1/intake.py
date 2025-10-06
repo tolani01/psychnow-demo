@@ -143,7 +143,9 @@ async def start_intake_session(
 @limiter.limit(get_chat_rate_limit)
 async def chat(
     request: Request,
-    chat_request: ChatRequest
+    chat_request: ChatRequest,
+    db: Session = Depends(get_db),
+    current_user: Optional[User] = Depends(get_current_user_optional)
 ):
     """
     Send a message and receive streaming AI response
@@ -192,40 +194,78 @@ async def chat(
         # Capture session_token for use in nested functions
         session_token_str = chat_request.session_token
         
-        try:
-            # Generate BOTH reports (patient and clinician versions)
-            dual_reports = await report_service.generate_dual_reports(session)
-            patient_report = dual_reports["patient_report"]
-            clinician_report = dual_reports["clinician_report"]
-            
-            # Check for high-risk and trigger escalation (use patient report for consistency)
-            risk_level = patient_report.get("risk_level", "low")
-            if risk_level == "high":
-                # Trigger high-risk escalation
-                await escalation_service.handle_high_risk_detection(
-                    session_data=session,
-                    risk_details={
-                        "risk_level": risk_level,
-                        "screener_name": "Clinical Assessment",
-                        "score": patient_report.get("screeners", [{}])[0].get("score", "N/A"),
-                        "details": patient_report.get("safety_assessment", "High risk detected in intake")
-                    },
-                    db=db
+        # Send progress messages during completion
+        async def stream_completion_with_progress():
+            try:
+                # Step 1: Initial confirmation
+                progress_msg = ChatResponse(
+                    role="model",
+                    content="🏁 Completing your assessment...\n\n┌─────────────────────────────────────────┐\n│ ✅ Analyzing your responses              │\n│ ⏳ Generating personalized report...     │\n│ ⏳ Creating downloadable PDF...          │\n│ ⏳ Finalizing everything...             │\n└─────────────────────────────────────────┘\n\nThis usually takes 30-60 seconds...",
+                    timestamp=datetime.utcnow(),
+                    done=False,
+                    completion_status="processing"
                 )
-            
-            # Generate BOTH PDFs - capture patient name
-            patient_name = current_user.name if current_user else "Patient"
-            patient_pdf_base64 = pdf_service.generate_patient_report_base64(patient_report, patient_name)
-            clinician_pdf_base64 = pdf_service.generate_clinician_report_base64(clinician_report, patient_name)
-            
-            # Send completion message then report
-            async def stream_completion():
-                # Confirmation message
+                yield f"data: {progress_msg.model_dump_json()}\n\n"
+                
+                # Step 2: Generate reports
+                progress_msg = ChatResponse(
+                    role="model",
+                    content="📊 Generating your personalized report...",
+                    timestamp=datetime.utcnow(),
+                    done=False,
+                    completion_status="generating_report"
+                )
+                yield f"data: {progress_msg.model_dump_json()}\n\n"
+                
+                dual_reports = await report_service.generate_dual_reports(session)
+                patient_report = dual_reports["patient_report"]
+                clinician_report = dual_reports["clinician_report"]
+                
+                # Step 3: Check for high-risk and trigger escalation
+                risk_level = patient_report.get("risk_level", "low")
+                if risk_level == "high":
+                    await escalation_service.handle_high_risk_detection(
+                        session_data=session,
+                        risk_details={
+                            "risk_level": risk_level,
+                            "screener_name": "Clinical Assessment",
+                            "score": patient_report.get("screeners", [{}])[0].get("score", "N/A"),
+                            "details": patient_report.get("safety_assessment", "High risk detected in intake")
+                        },
+                        db=db
+                    )
+                
+                # Step 4: Generate PDFs
+                progress_msg = ChatResponse(
+                    role="model",
+                    content="📄 Creating your downloadable report...",
+                    timestamp=datetime.utcnow(),
+                    done=False,
+                    completion_status="generating_pdf"
+                )
+                yield f"data: {progress_msg.model_dump_json()}\n\n"
+                
+                patient_name = f"{current_user.first_name} {current_user.last_name}".strip() if current_user else "Patient"
+                patient_pdf_base64 = pdf_service.generate_patient_report_base64(patient_report, patient_name)
+                clinician_pdf_base64 = pdf_service.generate_clinician_report_base64(clinician_report, patient_name)
+                
+                # Step 5: Final completion
+                progress_msg = ChatResponse(
+                    role="model",
+                    content="✅ Finalizing everything...",
+                    timestamp=datetime.utcnow(),
+                    done=False,
+                    completion_status="finalizing"
+                )
+                yield f"data: {progress_msg.model_dump_json()}\n\n"
+                
+                # Final completion message
                 conf_msg = ChatResponse(
                     role="model",
                     content="✅ Assessment complete! Your report has been generated and saved to your dashboard.",
                     timestamp=datetime.utcnow(),
-                    done=False
+                    done=False,
+                    completion_status="completed"
                 )
                 yield f"data: {conf_msg.model_dump_json()}\n\n"
                 
@@ -266,94 +306,56 @@ Both reports are available for download below.
                 yield f"data: {report_msg.model_dump_json()}\n\n"
                 
                 # Save report to database
-                db_session = db.query(IntakeSession).filter(
-                    IntakeSession.session_token == chat_request.session_token
-                ).first()
-                
-                report_id = None
-                if db_session:
-                    # Create report record with BOTH reports
-                    db_report = IntakeReport(
-                        session_id=db_session.id,
-                        patient_id=db_session.patient_id,
-                        report_data=patient_report,  # Patient version as main
-                        clinician_report_data=clinician_report,  # Clinician version
-                        severity_level=patient_report.get("risk_level"),
-                        risk_level=patient_report.get("risk_level"),
-                        urgency=patient_report.get("urgency"),
-                        patient_pdf_path=f"patient_{db_session.session_token[:8]}.pdf",
-                        clinician_pdf_path=f"clinician_{db_session.session_token[:8]}.pdf"
-                    )
-                    db.add(db_report)
-                    
-                    # Update session status
-                    db_session.status = "completed"
-                    db_session.completed_at = datetime.utcnow()
-                    
-                    db.commit()
-                    db.refresh(db_report)
-                    report_id = db_report.id
-                    
-                    # Send email notification to admin with both PDFs
-                    try:
-                        # Calculate duration
-                        duration = None
-                        if db_session.created_at and db_session.completed_at:
-                            duration_delta = db_session.completed_at - db_session.created_at
-                            duration = int(duration_delta.total_seconds() / 60)  # minutes
-                        
-                        email_service.send_assessment_completion_email(
-                            session_id=db_session.session_token,
-                            patient_pdf_base64=patient_pdf_base64,
-                            clinician_pdf_base64=clinician_pdf_base64,
-                            duration_minutes=duration
+                try:
+                    if DB_AVAILABLE:
+                        # Create intake report record
+                        report_record = IntakeReport(
+                            session_id=session.get("id"),
+                            patient_id=current_user.id if current_user else None,
+                            report_data=patient_report,
+                            clinician_report_data=clinician_report,
+                            severity_level=patient_report.get("severity_level"),
+                            risk_level=risk_level,
+                            urgency=patient_report.get("urgency"),
+                            patient_pdf_path="generated",  # Mark as generated
+                            clinician_pdf_path="generated"
                         )
-                        logger.info(f"✅ Assessment completion email sent for session {db_session.session_token}")
-                    except Exception as email_error:
-                        logger.error(f"⚠️ Failed to send completion email: {str(email_error)}")
-                        # Don't fail the request if email fails
-                    
-                    # Send report ID in a separate SSE message for frontend to capture
-                    report_id_msg = ChatResponse(
-                        role="model",
-                        content=f"REPORT_ID:{report_id}",  # Special format for frontend parsing
-                        timestamp=datetime.utcnow(),
-                        done=False
-                    )
-                    yield f"data: {report_id_msg.model_dump_json()}\n\n"
-        
-            return StreamingResponse(
-                stream_completion(),
-                media_type="text/event-stream",
-                headers={
-                    "X-Session-ID": session_token_str,
-                    "Cache-Control": "no-cache",
-                }
-            )
-        
-        except Exception as e:
-            print(f"Error generating report: {e}")
-            import traceback
-            traceback.print_exc()
-            
-            # Return error message to patient
-            async def stream_error():
+                        db.add(report_record)
+                        db.commit()
+                        
+                        # Update session status
+                        session_record = db.query(IntakeSession).filter(
+                            IntakeSession.session_token == session_token_str
+                        ).first()
+                        if session_record:
+                            session_record.status = "completed"
+                            session_record.completed_at = datetime.utcnow()
+                            db.commit()
+                except Exception as e:
+                    logger.error(f"Failed to save report to database: {e}")
+                    # Continue anyway - report generation succeeded
+                
+            except Exception as e:
+                logger.error(f"Error during assessment completion: {e}")
+                # Send error message
                 error_msg = ChatResponse(
                     role="model",
-                    content=f"I apologize, but I encountered an error while generating your report. Error: {str(e)[:100]}. Please try again or contact support if the issue persists.",
+                    content="❌ Sorry, there was an error completing your assessment. Please try again or contact support.",
                     timestamp=datetime.utcnow(),
                     done=True
                 )
                 yield f"data: {error_msg.model_dump_json()}\n\n"
-            
-            return StreamingResponse(
-                stream_error(),
-                media_type="text/event-stream",
-                headers={
-                    "X-Session-ID": session_token_str,
-                    "Cache-Control": "no-cache",
-                }
-            )
+        
+        return StreamingResponse(
+            stream_completion_with_progress(),
+            media_type="text/event-stream",
+            headers={
+                "X-Session-ID": session_token_str,
+                "Cache-Control": "no-cache",
+                "Connection": "keep-alive",
+            }
+        )
+    
     
     # Normal conversation
     async def stream_response():
