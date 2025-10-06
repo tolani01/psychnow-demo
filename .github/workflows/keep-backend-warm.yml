@@ -1,0 +1,16 @@
+name: keep-backend-warm
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'  # every 10 minutes
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping backend health endpoint
+        run: |
+          curl -fsS https://psychnow-api.onrender.com/health || true
+
+

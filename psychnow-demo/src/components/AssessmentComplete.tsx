@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { CheckCircle, Home, FileText, Star, Send, AlertCircle } from 'lucide-react';
 
@@ -12,10 +12,16 @@ export default function AssessmentComplete() {
   const navigate = useNavigate();
   const location = useLocation();
   const state = location.state as LocationState;
+  const apiBase = (import.meta as any).env?.VITE_API_BASE_URL || (window.location.hostname === 'localhost' ? 'http://127.0.0.1:8000' : 'https://psychnow-api.onrender.com');
+  const effectiveSessionId = state?.sessionId || (typeof window !== 'undefined' ? (new URLSearchParams(window.location.search).get('sessionId') || localStorage.getItem('psychnow_session_id') || '') : '');
   
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');
+  const [fallbackPatientPdf, setFallbackPatientPdf] = useState<string>('');
+  const [fallbackClinicianPdf, setFallbackClinicianPdf] = useState<string>('');
+  const [downloadingPatient, setDownloadingPatient] = useState(false);
+  const [downloadingClinician, setDownloadingClinician] = useState(false);
   
   // Feedback form state
   const [conversationRating, setConversationRating] = useState(0);
@@ -53,6 +59,58 @@ export default function AssessmentComplete() {
     }
   };
 
+  // Auto-fetch PDFs and email if missing/needed
+  useEffect(() => {
+    if (!effectiveSessionId) return;
+    fetch(`${apiBase}/api/v1/intake/session/${encodeURIComponent(effectiveSessionId)}/reports?email=true`)
+      .then(async (r) => {
+        if (!r.ok) return;
+        const data = await r.json();
+        if (!state?.patientPdf && data?.patient_pdf) setFallbackPatientPdf(data.patient_pdf);
+        if (!state?.clinicianPdf && data?.clinician_pdf) setFallbackClinicianPdf(data.clinician_pdf);
+      })
+      .catch(() => {});
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const fetchReports = async (): Promise<{ patient_pdf?: string; clinician_pdf?: string }> => {
+    if (!effectiveSessionId) return {};
+    try {
+      const r = await fetch(`${apiBase}/api/v1/intake/session/${encodeURIComponent(effectiveSessionId)}/reports`);
+      if (!r.ok) return {};
+      const data = await r.json();
+      if (data?.patient_pdf && !fallbackPatientPdf) setFallbackPatientPdf(data.patient_pdf);
+      if (data?.clinician_pdf && !fallbackClinicianPdf) setFallbackClinicianPdf(data.clinician_pdf);
+      return data;
+    } catch {
+      return {};
+    }
+  };
+
+  const handleDownload = async (reportType: 'patient' | 'clinician') => {
+    if (reportType === 'patient') {
+      const base64 = state?.patientPdf || fallbackPatientPdf;
+      if (base64) {
+        downloadPDF(base64, 'patient');
+        return;
+      }
+      setDownloadingPatient(true);
+      const data = await fetchReports();
+      if (data?.patient_pdf) downloadPDF(data.patient_pdf, 'patient');
+      setDownloadingPatient(false);
+    } else {
+      const base64 = state?.clinicianPdf || fallbackClinicianPdf;
+      if (base64) {
+        downloadPDF(base64, 'clinician');
+        return;
+      }
+      setDownloadingClinician(true);
+      const data = await fetchReports();
+      if (data?.clinician_pdf) downloadPDF(data.clinician_pdf, 'clinician');
+      setDownloadingClinician(false);
+    }
+  };
+
   const handleSubmitFeedback = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
@@ -71,7 +129,7 @@ export default function AssessmentComplete() {
     setSubmitting(true);
     
     try {
-      const apiBase = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000';
+      const apiBase = (import.meta as any).env?.VITE_API_BASE_URL || 'http://127.0.0.1:8000';
       const response = await fetch(`${apiBase}/api/v1/feedback/submit`, {
         method: 'POST',
         headers: {
@@ -133,7 +191,7 @@ export default function AssessmentComplete() {
     </div>
   );
 
-  if (!state?.sessionId) {
+  if (!effectiveSessionId) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
         <div className="bg-white rounded-lg shadow-lg p-8 max-w-md text-center">
@@ -231,12 +289,21 @@ export default function AssessmentComplete() {
                 Compassionate, patient-friendly summary with accessible language
               </p>
               <button
-                onClick={() => state?.patientPdf && downloadPDF(state.patientPdf, 'patient')}
-                disabled={!state?.patientPdf}
+                onClick={() => handleDownload('patient')}
+                disabled={downloadingPatient}
                 className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
               >
-                <FileText className="w-5 h-5" />
-                Download Patient Report
+                {downloadingPatient ? (
+                  <>
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    Preparing PDF...
+                  </>
+                ) : (
+                  <>
+                    <FileText className="w-5 h-5" />
+                    Download Patient Report
+                  </>
+                )}
               </button>
             </div>
 
@@ -250,12 +317,21 @@ export default function AssessmentComplete() {
                 Comprehensive clinical assessment with diagnostic reasoning
               </p>
               <button
-                onClick={() => state?.clinicianPdf && downloadPDF(state.clinicianPdf, 'clinician')}
-                disabled={!state?.clinicianPdf}
+                onClick={() => handleDownload('clinician')}
+                disabled={downloadingClinician}
                 className="w-full px-4 py-3 bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-300 text-white rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
               >
-                <FileText className="w-5 h-5" />
-                Download Clinician Report
+                {downloadingClinician ? (
+                  <>
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    Preparing PDF...
+                  </>
+                ) : (
+                  <>
+                    <FileText className="w-5 h-5" />
+                    Download Clinician Report
+                  </>
+                )}
               </button>
             </div>
           </div>
