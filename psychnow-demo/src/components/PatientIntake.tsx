@@ -79,7 +79,7 @@ export default function PatientIntake() {
     if (!sessionRef.current) return;
     
     try {
-      const apiBase = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000';
+      const apiBase = window.location.hostname === 'localhost' ? 'http://127.0.0.1:8002' : 'https://psychnow-api.onrender.com';
       const res = await fetch(`${apiBase}/api/v1/intake/chat`, {
         method: 'POST',
         headers: {
@@ -144,7 +144,7 @@ export default function PatientIntake() {
     const userId = `demo_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     
     try {
-      const apiBase = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000';
+      const apiBase = window.location.hostname === 'localhost' ? 'http://127.0.0.1:8002' : 'https://psychnow-api.onrender.com';
       const res = await fetch(`${apiBase}/api/v1/intake/start`, {
         method: 'POST',
         headers: {
@@ -247,7 +247,7 @@ export default function PatientIntake() {
 
   const sendMessageToBackend = async (prompt: string) => {
     try {
-      const apiBase = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000';
+      const apiBase = window.location.hostname === 'localhost' ? 'http://127.0.0.1:8002' : 'https://psychnow-api.onrender.com';
       const res = await fetch(`${apiBase}/api/v1/intake/chat`, {
         method: 'POST',
         headers: {
@@ -368,14 +368,14 @@ export default function PatientIntake() {
                   if (fullResponse.includes('Assessment complete') || fullResponse.includes('Assessment Summary')) {
                     setFinished(true);
                     
-                    // Navigate to feedback page with both PDFs after a short delay
+                    // Navigate to feedback page after a short delay (with or without PDFs)
                     setTimeout(() => {
-                      if (sessionRef.current && (patientPdfBase64 || data.patient_pdf)) {
+                      if (sessionRef.current) {
                         navigate('/complete', {
                           state: {
                             sessionId: sessionRef.current,
-                            patientPdf: data.patient_pdf || patientPdfBase64,
-                            clinicianPdf: data.clinician_pdf || clinicianPdfBase64
+                            patientPdf: data.patient_pdf || patientPdfBase64 || null,
+                            clinicianPdf: data.clinician_pdf || clinicianPdfBase64 || null
                           }
                         });
                       }
