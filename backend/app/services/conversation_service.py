@@ -16,6 +16,16 @@ from app.schemas.intake import ChatResponse as CR  # Backup import for error han
 logger = logging.getLogger(__name__)
 from app.services.screener_enforcement_service import screener_enforcement_service
 
+# Import report services for PDF generation
+try:
+    from app.services.report_service import report_service
+    from app.services.pdf_service import pdf_service
+    from app.services.email_service import email_service
+    REPORT_SERVICES_AVAILABLE = True
+except Exception as e:
+    logger.warning(f"Report services not available: {e}")
+    REPORT_SERVICES_AVAILABLE = False
+
 # ============================================================================
 # DSM-5 DOMAIN REQUIREMENTS FOR CLINICAL ASSESSMENT
 # ============================================================================
@@ -1362,7 +1372,35 @@ END_OPTIONS"""
             
             # Safe to finish with sufficient data
             session["is_finished"] = True
-            # TODO: Call actual report generation
+            
+            # Generate PDF reports
+            patient_pdf_base64 = None
+            clinician_pdf_base64 = None
+            
+            if REPORT_SERVICES_AVAILABLE:
+                try:
+                    logger.info(f"Generating reports for session {session_token}")
+                    
+                    # Generate patient report
+                    patient_report = await report_service.generate_report(session)
+                    patient_pdf_base64 = pdf_service.generate_patient_report_pdf_base64(patient_report, session.get("user_name", "Patient"))
+                    
+                    # Generate clinician report  
+                    clinician_report = await report_service.generate_clinician_report(session)
+                    clinician_pdf_base64 = pdf_service.generate_clinician_report_pdf_base64(clinician_report, session.get("user_name", "Patient"))
+                    
+                    logger.info(f"✅ PDF reports generated for session {session_token}")
+                    
+                except Exception as e:
+                    logger.error(f"❌ Failed to generate PDF reports: {e}")
+                    # Continue without PDFs - don't fail the assessment
+            
+            # Store PDF data in session for frontend
+            if patient_pdf_base64:
+                session["patient_pdf_base64"] = patient_pdf_base64
+            if clinician_pdf_base64:
+                session["clinician_pdf_base64"] = clinician_pdf_base64
+            
             completion_message = """Thank you for completing the assessment. Your detailed report has been generated and sent to your registered email address. Please review it and consult with a healthcare professional for further evaluation and personalized care.
 
 Would you like to:
@@ -1371,7 +1409,14 @@ Would you like to:
 - Get help with something else
 
 Is there anything else I can assist you with today?"""
-            yield completion_message
+            
+            # Yield completion message with PDF data
+            yield {
+                "content": completion_message,
+                "done": True,
+                "patient_pdf": patient_pdf_base64,
+                "clinician_pdf": clinician_pdf_base64
+            }
             return
         
         # CRITICAL SAFETY CHECKS - Must happen before any other processing
