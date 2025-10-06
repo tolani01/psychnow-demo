@@ -13,6 +13,8 @@ import base64
 from datetime import datetime
 
 from app.core.config import settings
+import json
+import httpx
 
 logger = logging.getLogger(__name__)
 
@@ -48,22 +50,61 @@ class EmailService:
         Returns:
             True if sent successfully, False otherwise
         """
+        # Prefer SendGrid HTTP API if configured
+        sendgrid_key = getattr(settings, 'SENDGRID_API_KEY', None)
+        if sendgrid_key:
+            try:
+                sg_payload = {
+                    "personalizations": [
+                        {"to": [{"email": to_email}]}
+                    ],
+                    "from": {"email": self.from_email, "name": self.from_name},
+                    "subject": subject,
+                    "content": [{"type": "text/html", "value": html_body}],
+                }
+                # Attachments (optional)
+                if attachments:
+                    sg_attachments = []
+                    for att in attachments:
+                        filename = att.get('filename', 'attachment.pdf')
+                        content = att.get('content')
+                        if isinstance(content, bytes):
+                            b64_content = base64.b64encode(content).decode('utf-8')
+                        else:
+                            b64_content = content  # already base64
+                        sg_attachments.append({
+                            "content": b64_content,
+                            "filename": filename,
+                            "type": "application/pdf"
+                        })
+                    if sg_attachments:
+                        sg_payload["attachments"] = sg_attachments
+                headers = {
+                    "Authorization": f"Bearer {sendgrid_key}",
+                    "Content-Type": "application/json"
+                }
+                with httpx.Client(timeout=15) as client:
+                    r = client.post("https://api.sendgrid.com/v3/mail/send", headers=headers, data=json.dumps(sg_payload))
+                if 200 <= r.status_code < 300:
+                    logger.info(f"✅ SendGrid email sent to {to_email}: {subject}")
+                    return True
+                else:
+                    logger.error(f"❌ SendGrid failed: {r.status_code} {r.text}")
+                    # Fall through to SMTP/logging
+            except Exception as e:
+                logger.error(f"❌ SendGrid exception: {str(e)}")
+                # Fall through to SMTP/logging
+
+        # SMTP fallback (optional)
         try:
-            # Create message
             msg = MIMEMultipart()
             msg['From'] = f"{self.from_name} <{self.from_email}>"
             msg['To'] = to_email
             msg['Subject'] = subject
-            
-            # Attach HTML body
             msg.attach(MIMEText(html_body, 'html'))
-            
-            # Attach files
             if attachments:
                 for attachment in attachments:
                     self._attach_file(msg, attachment)
-            
-            # Send email
             if self.smtp_user and self.smtp_password:
                 with smtplib.SMTP(self.smtp_host, self.smtp_port) as server:
                     server.starttls()
@@ -75,7 +116,6 @@ class EmailService:
                 logger.warning("⚠️ SMTP credentials not configured - email not sent (logged only)")
                 logger.info(f"📧 Would send to {to_email}: {subject}")
                 return False
-                
         except Exception as e:
             logger.error(f"❌ Failed to send email: {str(e)}")
             return False
