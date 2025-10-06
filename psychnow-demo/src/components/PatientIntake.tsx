@@ -384,7 +384,7 @@ export default function PatientIntake() {
                 if (data.done) {
                   setBusy(false);
                   
-                  if (fullResponse.includes('Assessment complete') || fullResponse.includes('Assessment Summary')) {
+                  if (fullResponse.includes('Thank you for completing the assessment') || fullResponse.includes('Assessment complete') || fullResponse.includes('Assessment Summary')) {
                     setFinished(true);
                     
                     // Navigate to feedback page after a short delay (with or without PDFs)
