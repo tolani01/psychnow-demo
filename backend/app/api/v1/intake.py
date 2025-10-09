@@ -8,6 +8,7 @@ from sqlalchemy.orm import Session
 from typing import AsyncIterator
 import json
 from datetime import datetime, timedelta
+import asyncio
 import secrets
 import logging
 
@@ -248,6 +249,20 @@ async def chat(
                 patient_name = f"{current_user.first_name} {current_user.last_name}".strip() if current_user else "Patient"
                 patient_pdf_base64 = pdf_service.generate_patient_report_base64(patient_report, patient_name)
                 clinician_pdf_base64 = pdf_service.generate_clinician_report_base64(clinician_report, patient_name)
+                
+                # Step 4.5: Email reports to admin (non-blocking)
+                try:
+                    if email_service:
+                        asyncio.create_task(
+                            asyncio.to_thread(
+                                email_service.send_assessment_completion_email,
+                                session_token_str,
+                                patient_pdf_base64,
+                                clinician_pdf_base64,
+                            )
+                        )
+                except Exception as e:
+                    logger.error(f"Failed to schedule completion email for {session_token_str}: {e}")
                 
                 # Step 5: Final completion
                 progress_msg = ChatResponse(
@@ -858,4 +873,75 @@ async def transfer_session(
         "new_patient_id": str(new_user_id),
         "session_token": session_token
     }
+
+
+@router.get("/session/{session_token}/reports")
+async def get_reports_for_session(
+    session_token: str,
+    email: bool = False,
+    db: Session = Depends(get_db),
+    current_user: Optional[User] = Depends(get_current_user_optional)
+):
+    """Fetch (or regenerate) PDFs for a session. Optionally emails them to ADMIN_EMAIL.
+
+    This is a safety net if the streaming path didn't deliver PDFs to the client.
+    """
+    try:
+        # Try in-memory session first
+        sess = conversation_service.get_session(session_token)
+        if not sess and DB_AVAILABLE:
+            # Minimal reconstruction from DB
+            db_session = db.query(IntakeSession).filter(
+                IntakeSession.session_token == session_token
+            ).first()
+            if not db_session:
+                raise HTTPException(status_code=404, detail="Session not found")
+            sess = {
+                "id": db_session.id,
+                "session_token": db_session.session_token,
+                "conversation_history": db_session.conversation_history or [],
+                "created_at": (db_session.created_at.isoformat() if db_session.created_at else datetime.utcnow().isoformat()),
+                "current_phase": db_session.current_phase or ""
+            }
+
+        if not sess:
+            raise HTTPException(status_code=404, detail="Session not available")
+
+        # Regenerate dual reports
+        dual_reports = await report_service.generate_dual_reports(sess)
+        patient_report = dual_reports["patient_report"]
+        clinician_report = dual_reports["clinician_report"]
+
+        patient_name = f"{current_user.first_name} {current_user.last_name}".strip() if current_user else "Patient"
+        patient_pdf_base64 = pdf_service.generate_patient_report_base64(patient_report, patient_name)
+        clinician_pdf_base64 = pdf_service.generate_clinician_report_base64(clinician_report, patient_name)
+
+        # Optionally email
+        emailed = False
+        if email and email_service:
+            try:
+                # Send in background thread to avoid blocking
+                asyncio.create_task(
+                    asyncio.to_thread(
+                        email_service.send_assessment_completion_email,
+                        session_token,
+                        patient_pdf_base64,
+                        clinician_pdf_base64,
+                    )
+                )
+                emailed = True
+            except Exception as e:
+                logger.error(f"Failed to schedule email for reports: {e}")
+
+        return {
+            "patient_pdf": patient_pdf_base64,
+            "clinician_pdf": clinician_pdf_base64,
+            "emailed": emailed
+        }
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error generating reports for {session_token}: {e}")
+        raise HTTPException(status_code=500, detail="Failed to generate reports for session")
 
