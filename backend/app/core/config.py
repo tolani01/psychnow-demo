@@ -47,6 +47,7 @@ class Settings(BaseSettings):
     PDF_DIR: str = "./pdfs"
     
     # Email Settings (Optional - for demo notifications)
+    RESEND_API_KEY: Optional[str] = None
     SMTP_HOST: str = "smtp.gmail.com"
     SMTP_PORT: int = 587
     SMTP_USER: Optional[str] = None

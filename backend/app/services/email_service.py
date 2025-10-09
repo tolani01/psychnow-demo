@@ -13,6 +13,8 @@ import base64
 from datetime import datetime
 
 from app.core.config import settings
+import json
+import httpx
 
 logger = logging.getLogger(__name__)
 
@@ -48,6 +50,55 @@ class EmailService:
         Returns:
             True if sent successfully, False otherwise
         """
+        # Prefer Resend HTTP API if configured
+        if settings.RESEND_API_KEY:
+            try:
+                # Use Resend's default domain for unverified senders
+                from_email = self.from_email if "@resend.dev" in self.from_email else "onboarding@resend.dev"
+                resend_payload = {
+                    "from": f"{self.from_name} <{from_email}>",
+                    "to": [to_email],
+                    "subject": subject,
+                    "html": html_body,
+                }
+                
+                # Attachments (optional)
+                if attachments:
+                    resend_attachments = []
+                    for att in attachments:
+                        filename = att.get('filename', 'attachment.pdf')
+                        content = att.get('content')
+                        if isinstance(content, bytes):
+                            b64_content = base64.b64encode(content).decode('utf-8')
+                        else:
+                            b64_content = content  # already base64
+                        resend_attachments.append({
+                            "content": b64_content,
+                            "filename": filename,
+                            "content_type": "application/pdf"
+                        })
+                    if resend_attachments:
+                        resend_payload["attachments"] = resend_attachments
+                
+                headers = {
+                    "Authorization": f"Bearer {settings.RESEND_API_KEY}",
+                    "Content-Type": "application/json"
+                }
+                
+                with httpx.Client(timeout=15) as client:
+                    r = client.post("https://api.resend.com/emails", headers=headers, data=json.dumps(resend_payload))
+                
+                if 200 <= r.status_code < 300:
+                    logger.info(f"✅ Resend email sent to {to_email}: {subject}")
+                    return True
+                else:
+                    logger.error(f"❌ Resend failed: {r.status_code} {r.text}")
+                    # Fall through to SMTP
+            except Exception as e:
+                logger.error(f"❌ Resend exception: {str(e)}")
+                # Fall through to SMTP
+
+        # SMTP fallback
         try:
             msg = MIMEMultipart()
             msg['From'] = f"{self.from_name} <{self.from_email}>"
